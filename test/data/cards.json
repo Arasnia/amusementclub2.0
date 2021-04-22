@@ -88,33 +88,28 @@
     {"name":"Black_Tea_and_Milk","level":5,"animated":false,"col":"foodfantasy"},
 
     {"name":"Eli_Ayase_Mogyutto_love_de_Sekkinchuu","level":1,"animated":false,"col":"lovelive"},
-    {"name":"Eli_Ayase_Natsuiro_Egao_de_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
-    {"name":"Eli_Ayase_Uniform","level":1,"animated":false,"col":"lovelive"},
-    {"name":"Eli_Ayase_Uniform_02","level":1,"animated":false,"col":"lovelive"},
-
-    {"name":"Hanayo_Koizumi_Natsuiro_Egao_de_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
-    {"name":"Hanayo_Koizumi_Uniform","level":1,"animated":false,"col":"lovelive"},
-
-    {"name":"Honoka_Kousaka_Natsuiro_Egao_de_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
-    {"name":"Honoka_Kousaka_Uniform","level":1,"animated":false,"col":"lovelive"},
     {"name":"Honoka_Kousaka_Mogyutto_love_de_Sekkinchuu","level":1,"animated":false,"col":"lovelive"},
-    {"name":"Honoka_Kousaka_Uniform_02","level":1,"animated":false,"col":"lovelive"},
 
+    {"name":"Eli_Ayase_Natsuiro_Egao_de_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Hanayo_Koizumi_Natsuiro_Egao_de_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Honoka_Kousaka_Natsuiro_Egao_de_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
     {"name":"Kotori_Minami_Natsuiro_Egao_de_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
-    {"name":"Kotori_Minami_Uniform","level":1,"animated":false,"col":"lovelive"},
-
     {"name":"Maki_Nishikino_Natsuiro_Egao_de_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
-    {"name":"Maki_Nishikino_Uniform","level":1,"animated":false,"col":"lovelive"},
-
     {"name":"Nico_Yazawa_Natsuiro_Egao_de_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
-    {"name":"Nico_Yazawa_Uniform","level":1,"animated":false,"col":"lovelive"},
-
     {"name":"Nozomi_Tojo_Natsuiro_Egao_de_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
-    {"name":"Nozomi_Tojo_Uniform","level":1,"animated":false,"col":"lovelive"},
-
     {"name":"Rin_Hoshisora_Natsuiro_Egao_de_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
-    {"name":"Rin_Hoshisora_Uniform","level":1,"animated":false,"col":"lovelive"},
-
     {"name":"Umi_Sonoda_Natsuiro_Egao_de_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
-    {"name":"Umi_Sonoda_Uniform","level":1,"animated":false,"col":"lovelive"}
+
+    {"name":"Eli_Ayase_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Hanayo_Koizumi_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Honoka_Kousaka_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Kotori_Minami_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Maki_Nishikino_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Nico_Yazawa_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Nozomi_Tojo_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Rin_Hoshisora_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Umi_Sonoda_Uniform","level":1,"animated":false,"col":"lovelive"},
+
+    {"name":"Eli_Ayase_Uniform_02","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Honoka_Kousaka_Uniform_02","level":1,"animated":false,"col":"lovelive"}
 ]
