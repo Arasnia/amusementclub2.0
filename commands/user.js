@@ -420,7 +420,7 @@ cmd('miss', withGlobalCards(async (ctx, user, cards, parsedargs) => {
         return ctx.reply(user, `you have all cards matching this request!`)
 
     return ctx.pgn.addPagination(user.discord_id, ctx.msg.channel.id, {
-        pages: ctx.pgn.getPages(diff.map(x => formatName(x)), 15),
+        pages: ctx.pgn.getPages(diff.map(x => formatName(x)), 8),
         embed: { author: { name: `${user.username}, cards that you don't have (${diff.length} results)` } }
     })
 }))
