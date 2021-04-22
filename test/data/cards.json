@@ -85,25 +85,25 @@
     {"name":"Coffee_and_Chocolate","level":5,"animated":false,"col":"foodfantasy"},
     {"name":"Black_Tea_and_Milk","level":5,"animated":false,"col":"foodfantasy"},
 
-    {"name":"Eli_Ayase_Mogyutto","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Hanayo_Kousaka_Mogyutto","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Honoka_Kousaka_Mogyutto","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Kotori_Minami_Mogyutto","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Maki_Nishikino_Mogyutto","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Nico_Yazawa_Mogyutto","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Nozomi_Tojo_Mogyutto","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Rin_Hoshisora_Mogyutto","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Umi_Sonoda_Mogyutto","level":1,"animated":false,"col":"loveliveproject"},
+    {"name":"Eli_Ayase_Mogyutto","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Hanayo_Kousaka_Mogyutto","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Honoka_Kousaka_Mogyutto","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Kotori_Minami_Mogyutto","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Maki_Nishikino_Mogyutto","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Nico_Yazawa_Mogyutto","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Nozomi_Tojo_Mogyutto","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Rin_Hoshisora_Mogyutto","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Umi_Sonoda_Mogyutto","level":1,"animated":false,"col":"lovelive"},
 
-    {"name":"Eli_Ayase_1_2_Jump","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Hanayo_Koizumi_1_2_Jump","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Honoka_Kousaka_1_2_Jump","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Nozomi_Tojo_1_2_Jump","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Maki_Nishikino_1_2_Jump","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Nico_Yazawa_1_2_Jump","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Nozomi_Tojo_1_2_Jump","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Rin_Hoshisora_1_2_Jump","level":1,"animated":false,"col":"loveliveproject"},
-    {"name":"Umi_Sonoda_1_2_Jump","level":1,"animated":false,"col":"loveliveproject"}
+    {"name":"Eli_Ayase_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Hanayo_Koizumi_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Honoka_Kousaka_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Nozomi_Tojo_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Maki_Nishikino_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Nico_Yazawa_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Nozomi_Tojo_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Rin_Hoshisora_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Umi_Sonoda_1_2_Jump","level":1,"animated":false,"col":"lovelive"}
 
 
 ]
