@@ -14,7 +14,7 @@ module.exports = [
         check: (ctx, user) => user.dailystats.claims > 0,
         resolve: (ctx, user) => {
             user.exp += 200
-            return `**200** ${ctx.symbols.tomato}`
+            return `**200** ${ctx.symbols.avocado}`
         }
     }, {
         id: 'auccard',
@@ -24,7 +24,7 @@ module.exports = [
         check: (ctx, user) => user.dailystats.aucs > 0,
         resolve: (ctx, user) => {
             user.exp += 400
-            return `**400** ${ctx.symbols.tomato}`
+            return `**400** ${ctx.symbols.avocado}`
         }
     }, {
         id: 'firstdaily',
@@ -49,7 +49,7 @@ module.exports = [
             user.exp += 10000
             user.vials += 1000
             user.xp += 100
-            return `**10000** ${ctx.symbols.tomato} and **1000** ${ctx.symbols.vial}`
+            return `**10000** ${ctx.symbols.avocado} and **1000** ${ctx.symbols.vial}`
         }
     }, {
         id: 'firstforge',
@@ -95,7 +95,7 @@ module.exports = [
         resolve: (ctx, user) => {
             user.xp += 2
             user.exp += 800
-            return `**800** ${ctx.symbols.tomato}`
+            return `**800** ${ctx.symbols.avocado}`
         }
     }, {
         id: 'firstspecial',
@@ -105,7 +105,7 @@ module.exports = [
         check: (ctx, user) => user.cards.some(x => ctx.cards[x.id] && ctx.cards[x.id].level === 4),
         resolve: (ctx, user) => {
             user.exp += 500
-            return `**500** ${ctx.symbols.tomato}`
+            return `**500** ${ctx.symbols.avocado}`
         }
     }, {
         id: '1000stars',
@@ -117,7 +117,7 @@ module.exports = [
             .reduce((a, b) => a + b, 0) >= 1000,
         resolve: (ctx, user) => {
             user.exp += 500
-            return `**500** ${ctx.symbols.tomato}`
+            return `**500** ${ctx.symbols.avocado}`
         }
     }, {
         id: 'firsteffect',
@@ -132,7 +132,7 @@ module.exports = [
         },
         resolve: (ctx, user) => {
             user.exp += 500
-            return `**500** ${ctx.symbols.tomato}`
+            return `**500** ${ctx.symbols.avocado}`
         }
     }
 

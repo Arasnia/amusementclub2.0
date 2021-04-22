@@ -76,8 +76,8 @@ cmd('claim', 'cl', async (ctx, user, ...args) => {
         return ctx.reply(user, `you can claim only **10** or less cards with one command`, 'red')
 
     if(!promo && price > user.exp)
-        return ctx.reply(user, `you need **${price}** ${ctx.symbols.tomato} to claim ${amount > 1? amount + ' cards' : 'a card'}. 
-            You have **${Math.floor(user.exp)}** ${ctx.symbols.tomato}`, 'red')
+        return ctx.reply(user, `you need **${price}** ${ctx.symbols.avocado} to claim ${amount > 1? amount + ' cards' : 'a card'}. 
+            You have **${Math.floor(user.exp)}** ${ctx.symbols.avocado}`, 'red')
 
     if(promo && price > user.promoexp)
         return ctx.reply(user, `you need **${price}** ${promo.currency} to claim ${amount > 1? amount + ' cards' : 'a card'}. 
@@ -103,7 +103,7 @@ cmd('claim', 'cl', async (ctx, user, ...args) => {
             boostdrop = true
             card = ctx.cards[_.sample(boost.cards)]
         }
-        else card = _.sample(colCards.filter(x => x.level < 5 && !x.excluded))
+        else card = _.sample(colCards.filter(x => x.level < 6 && !x.excluded))
 
         const count = addUserCard(user, card.id)
 
@@ -114,7 +114,7 @@ cmd('claim', 'cl', async (ctx, user, ...args) => {
     
     cards.sort((a, b) => b.card.level - a.card.level)
 
-    let curr = ctx.symbols.tomato, max = 1
+    let curr = ctx.symbols.avocado, max = 1
     const extra = Math.round(price * .25)
     const newCards = cards.filter(x => x.count === 1)
     const oldCards = cards.filter(x => x.count > 1)
@@ -164,6 +164,9 @@ cmd('claim', 'cl', async (ctx, user, ...args) => {
         Your next claim will cost **${promo? promoClaimCost(user, 1) : claimCost(user, ctx.guild.tax, 1)}** ${curr}
         ${activepromo && !promo? `You got **${extra}** ${activepromo.currency}
         You now have **${user.promoexp}** ${activepromo.currency}` : ""}`.replace(/\s\s+/gm, '\n')})
+        fields.push({name: `Image`, value:
+        `[ ](http://noxcaos.ddns.net:3000/cards?type=claim&ids=${cards.map(x => x.card.id).join(',')})`})
+
     /*fields.push({name: `External view`, value:
         `[view your claimed cards here](http://noxcaos.ddns.net:3000/cards?type=claim&ids=${cards.map(x => x.card.id).join(',')})`})*/
 
@@ -175,7 +178,7 @@ cmd('claim', 'cl', async (ctx, user, ...args) => {
     }).filter(x => x && x.value)
 
     const pages = cards.map(x => x.card.url)
-    return ctx.pgn.addPagination(user.discord_id, ctx.msg.channel.id, {
+    return ctx.pgn.addPagination(user.discord_id, ctx.msg.channel.id,  {
         pages,
         buttons: ['back', 'forward'],
         switchPage: (data) => data.embed.image.url = data.pages[data.pagenum],
@@ -183,7 +186,7 @@ cmd('claim', 'cl', async (ctx, user, ...args) => {
             color: colors.blue,
             description,
             fields,
-            image: { url: '' }
+            image: { url: ``}
         }
     })
 })
@@ -193,10 +196,12 @@ cmd('sum', 'summon', withCards(async (ctx, user, cards, parsedargs) => {
     user.lastcard = card.id
     await user.save()
 
+    console.log(card)
     if(card.imgur) {
         await ctx.reply(user, {
-            color: colors.blue,
+            color: colors.green,
             description: `summons **${formatName(card)}**!`
+            
         })
 
         return ctx.bot.createMessage(ctx.msg.channel.id, card.imgur)
@@ -234,7 +239,7 @@ cmd('sell', withCards(async (ctx, user, cards, parsedargs) => {
     const targetuser = id? await fetchOnly(id) : null
 
     if(targetuser && targetuser.discord_id === user.discord_id) {
-        return ctx.reply(user, `you cannot sell cards to yourself.`, 'red')
+        return ctx.reply(user, `You cant sell yourself cards, you jerk!.`, 'red')
     }
 
     if(!targetuser && pendingto.length > 0)
@@ -284,9 +289,9 @@ cmd('sell', withCards(async (ctx, user, cards, parsedargs) => {
 
     let question = ""
     if(trs.to != 'bot') {
-        question = `**${trs.to}**, **${trs.from}** wants to sell you **${formatName(card)}** for **${price}** ${ctx.symbols.tomato}`
+        question = `**${trs.to}**, **${trs.from}** wants to sell you **${formatName(card)}** for **${price}** ${ctx.symbols.avocado}`
     } else {
-        question = `**${trs.from}**, do you want to sell **${formatName(card)}** to **bot** for **${price}** ${ctx.symbols.tomato}?`
+        question = `**${trs.from}**, do you want to sell **${formatName(card)}** to **bot** for **${price}** ${ctx.symbols.avocado} ?`
         perms.confirm.push(user.discord_id)
     }
 
@@ -305,7 +310,7 @@ cmd('eval', withGlobalCards(async (ctx, user, cards, parsedargs) => {
     const price = await evalCard(ctx, card)
     const vials = await getVialCost(ctx, card, price)
     return ctx.reply(user, 
-        `card ${formatName(card)} is worth: **${price}** ${ctx.symbols.tomato} ${card.level < 4? `or **${vials}** ${ctx.symbols.vial}` : ``}`)
+        `card ${formatName(card)} is worth: **${price}** ${ctx.symbols.avocado} ${card.level < 4? `or **${vials}** ${ctx.symbols.vial}` : ``}`)
 }))
 
 cmd('fav', withCards(async (ctx, user, cards, parsedargs) => {
@@ -406,7 +411,7 @@ cmd('info', ['card', 'info'], withGlobalCards(async (ctx, user, cards, parsedarg
 
     resp.push(formatName(card))
     resp.push(`Fandom: **${col.name}**`)
-    resp.push(`Price: **${price}** ${ctx.symbols.tomato}`)
+    resp.push(`Price: **${price}** ${ctx.symbols.avocado}`)
 
     if(extrainfo.ratingsum > 0)
         resp.push(`Average Rating: **${(extrainfo.ratingsum / extrainfo.usercount).toFixed(2)}**`)
@@ -424,7 +429,13 @@ cmd('info', ['card', 'info'], withGlobalCards(async (ctx, user, cards, parsedarg
         embed.fields.push({name: `Tags`, value: `#${tags.slice(0, 4).map(x => x.name).join('\n#')}${tags.length > 4? '\n...' : ''}`})
     }
 
-    return ctx.send(ctx.msg.channel.id, embed, user.discord_id)
+    return ctx.send(ctx.msg.channel.id, {
+        title: col.name,
+        image: { url: card.url },
+        description: resp.join('\n'),
+        color: colors.blue
+    }, user.discord_id)
+
 }))
 
 cmd('boost', 'boosts', (ctx, user) => {

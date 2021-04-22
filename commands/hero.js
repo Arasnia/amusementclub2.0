@@ -334,7 +334,7 @@ cmd(['hero', 'submit'], async (ctx, user, arg1) => {
 
     const price = 512 * (2 ** user.herosubmits)
     if(user.exp < price)
-        return ctx.reply(user, `you have to have at least **${price}** ${ctx.symbols.tomato} to submit a hero`, 'red')
+        return ctx.reply(user, `you have to have at least **${price}** ${ctx.symbols.avocado} to submit a hero`, 'red')
 
     const charID = arg1.replace('https://', '').split('/')[2]
     if(!charID)

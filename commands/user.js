@@ -69,9 +69,9 @@ cmd('bal', 'balance', (ctx, user) => {
 
     const embed = {
         color: colors.green,
-        description: `you have **${Math.round(user.exp)}** ${ctx.symbols.tomato} and **${Math.round(user.vials)}** ${ctx.symbols.vial}
-            Your next claim will cost **${claimCost(user, 0, 1)}** ${ctx.symbols.tomato}
-            ${ctx.guild? `Next claim in current guild: **${claimCost(user, ctx.guild.tax, 1)}** ${ctx.symbols.tomato} (+${ctx.guild.tax * 100}% claim tax)`:''}
+        description: `you have **${Math.round(user.exp)}** ${ctx.symbols.avocado} and **${Math.round(user.vials)}** ${ctx.symbols.vial}
+            Your next claim will cost **${claimCost(user, 0, 1)}** ${ctx.symbols.avocado}
+            ${ctx.guild? `Next claim in current guild: **${claimCost(user, ctx.guild.tax, 1)}** ${ctx.symbols.avocado} (+${ctx.guild.tax * 100}% claim tax)`:''}
             You can claim **${max - 1} cards** ${ctx.guild? `in current guild `:''}with your balance`
     }
 
@@ -229,8 +229,8 @@ cmd('daily', async (ctx, user) => {
         })
 
         return ctx.reply(user, {
-            description: `you received daily **${amount}** ${ctx.symbols.tomato} ${promo? `and **${promoAmount}** ${promo.currency}`: ""}
-                You now have **${Math.round(user.exp)}** ${ctx.symbols.tomato} ${promo? `and **${user.promoexp}** ${promo.currency}`: ""}`,
+            description: `you received daily **${amount}** ${ctx.symbols.avocado} ${promo? `and **${promoAmount}** ${promo.currency}`: ""}
+                You now have **${Math.round(user.exp)}** ${ctx.symbols.avocado} ${promo? `and **${user.promoexp}** ${promo.currency}`: ""}`,
             color: colors.green,
             fields
         })
@@ -243,7 +243,7 @@ cmd('cards', 'li', 'ls', 'list', withCards(async (ctx, user, cards, parsedargs) 
     const now = new Date()
     const cardstr = cards.map(c => {
         const isnew = c.obtained > (user.lastdaily || now)
-        return (isnew? '**[new]** ' : '') + formatName(c) + (c.amount > 1? ` (x${c.amount}) ` : ' ') + (c.rating? `[${c.rating}/10]` : '')
+        return (isnew? '**[✨]** ' : '') + formatName(c) + (c.amount > 1? ` (x${c.amount}) ` : ' ') + (c.rating? `[${c.rating}/10]` : '')
     })
 
     return ctx.pgn.addPagination(user.discord_id, ctx.msg.channel.id, {
@@ -257,7 +257,7 @@ cmd('favs', withCards(async (ctx, user, cards, parsedargs) => {
     cards = cards.filter(x => x.fav)
     const cardstr = cards.map(c => {
         const isnew = c.obtained > (user.lastdaily || now)
-        return (isnew? '**[new]** ' : '') + formatName(c) + (c.amount > 1? ` (x${c.amount}) ` : ' ') + (c.rating? `[${c.rating}/10]` : '')
+        return (isnew? '**[✨]** ' : '') + formatName(c) + (c.amount > 1? ` (x${c.amount}) ` : ' ') + (c.rating? `[${c.rating}/10]` : '')
     })
 
     return ctx.pgn.addPagination(user.discord_id, ctx.msg.channel.id, {

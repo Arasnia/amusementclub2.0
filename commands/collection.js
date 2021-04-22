@@ -56,8 +56,8 @@ cmd(['col', 'info'], ['collection', 'info'], async (ctx, user, ...args) => {
     if(!col)
         return ctx.reply(user, `found 0 collections matching \`${args.join(' ')}\``, 'red')
 
-    const colCards = ctx.cards.filter(x => x.col === col.id && x.level < 5)
-    const userCards = mapUserCards(ctx, user).filter(x => x.col === col.id && x.level < 5)
+    const colCards = ctx.cards.filter(x => x.col === col.id && x.level < 6)
+    const userCards = mapUserCards(ctx, user).filter(x => x.col === col.id && x.level < 6)
     const card = _.sample(colCards)
     const clout = user.completedcols.find(x => x.id === col.id)
 
@@ -89,9 +89,9 @@ cmd(['col', 'reset'], ['collection', 'reset'], async (ctx, user, ...args) => {
     if(!col)
         return ctx.reply(user, `found 0 collections matching \`${args.join(' ')}\``, 'red')
 
-    const legendary = ctx.cards.find(x => x.col === col.id && x.level === 5)
-    const colCards = ctx.cards.filter(x => x.col === col.id && x.level < 5)
-    let userCards = mapUserCards(ctx, user).filter(x => x.col === col.id && x.level < 5)
+    const legendary = ctx.cards.find(x => x.col === col.id && x.level === 6)
+    const colCards = ctx.cards.filter(x => x.col === col.id && x.level < 6)
+    let userCards = mapUserCards(ctx, user).filter(x => x.col === col.id && x.level < 6)
 
     if(userCards.length < colCards.length)
         return ctx.reply(user, `you have to have **100%** of the cards from collection (excluding legendaries) in order to reset it`, 'red')

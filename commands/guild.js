@@ -108,13 +108,13 @@ cmd(['guild', 'status'], (ctx, user) => {
     const total = Math.round(cost - cost * ctx.guild.discount)
     const ratio = total / ctx.guild.balance
 
-    resp.push(`Building maintenance: **${cost}** ${ctx.symbols.tomato}/day`)
+    resp.push(`Building maintenance: **${cost}** ${ctx.symbols.avocado}/day`)
 
     if(ctx.guild.discount > 0) {
         resp.push(`Maintenance discount: **${ctx.guild.discount * 100}%**`)
-        resp.push(`Subtotal after discounts: **${total}** ${ctx.symbols.tomato}/day`)
+        resp.push(`Subtotal after discounts: **${total}** ${ctx.symbols.avocado}/day`)
     }
-    resp.push(`Current finances: **${ctx.guild.balance}** ${ctx.symbols.tomato}`)
+    resp.push(`Current finances: **${ctx.guild.balance}** ${ctx.symbols.avocado}`)
     resp.push(`Ratio: **${ratio.toFixed(2)}** (${ratio <= 1? 'positive' : 'negative'})`)
     resp.push(`Maintenance charges in **${msToTime(ctx.guild.nextcheck - new Date(), {compact: true})}**`)
     resp.push(`> Make sure you have **positive** ratio when maintenance costs are charged`)
@@ -125,7 +125,7 @@ cmd(['guild', 'status'], (ctx, user) => {
         fields: [{name: `Maintenance breakdown`, value: ctx.guild.buildings.map(x => {
             const item = ctx.items.find(y => y.id === x.id)
             const heart = x.health < 50? '💔' : '❤️'
-            return `[\`${heart}\` ${x.health}] **${item.name}** level **${x.level}** costs **${item.levels[x.level - 1].maintenance}** ${ctx.symbols.tomato}/day`
+            return `[\`${heart}\` ${x.health}] **${item.name}** level **${x.level}** costs **${item.levels[x.level - 1].maintenance}** ${ctx.symbols.avocado}/day`
         }).join('\n')}],
         color: (ratio <= 1? color.green : color.red)
     }, user.discord_id)
@@ -155,9 +155,9 @@ cmd(['guild', 'upgrade'], async (ctx, user, arg1) => {
         return ctx.reply(user, `this guild has to be at least level **${level.level}** to have **${item.name} level ${building.level + 1}**`, 'red')
 
     if(user.exp < level.price)
-        return ctx.reply(user, `you have to have at least **${level.price}** ${ctx.symbols.tomato} to upgrade this building`, 'red')
+        return ctx.reply(user, `you have to have at least **${level.price}** ${ctx.symbols.avocado} to upgrade this building`, 'red')
 
-    const question = `Do you want to upgrade **${item.name}** to level **${building.level + 1}** for **${level.price}** ${ctx.symbols.tomato}?`
+    const question = `Do you want to upgrade **${item.name}** to level **${building.level + 1}** for **${level.price}** ${ctx.symbols.avocado}?`
     return ctx.pgn.addConfirmation(user.discord_id, ctx.msg.channel.id, {
         question,
         force: ctx.globals.force,
@@ -237,13 +237,13 @@ cmd(['guild', 'donate'], async (ctx, user, arg1) => {
         return ctx.reply(user, '**Guild Castle** is required before you can donate. Buy one in the `->store`', 'red')
 
     if(!amount)
-        return ctx.reply(user, `please enter amount of ${ctx.symbols.tomato} you want to donate to this guild`, 'red')
+        return ctx.reply(user, `please enter amount of ${ctx.symbols.avocado} you want to donate to this guild`, 'red')
 
     amount = Math.abs(amount)
     if(user.exp < amount)
-        return ctx.reply(user, `you don't have **${amount}** ${ctx.symbols.tomato} to donate`, 'red')
+        return ctx.reply(user, `you don't have **${amount}** ${ctx.symbols.avocado} to donate`, 'red')
 
-    const question = `Do you want to donate **${amount}** ${ctx.symbols.tomato} to **${ctx.discord_guild.name}**?`
+    const question = `Do you want to donate **${amount}** ${ctx.symbols.avocado} to **${ctx.discord_guild.name}**?`
     return ctx.pgn.addConfirmation(user.discord_id, ctx.msg.channel.id, {
         question,
         force: ctx.globals.force,
@@ -257,8 +257,8 @@ cmd(['guild', 'donate'], async (ctx, user, arg1) => {
             await user.save()
             await ctx.guild.save()
 
-            return ctx.reply(user, `you donated **${amount}** ${ctx.symbols.tomato} to **${ctx.discord_guild.name}**!
-                This now has **${ctx.guild.balance}** ${ctx.symbols.tomato}
+            return ctx.reply(user, `you donated **${amount}** ${ctx.symbols.avocado} to **${ctx.discord_guild.name}**!
+                This now has **${ctx.guild.balance}** ${ctx.symbols.avocado}
                 You have been awarded **${Math.floor(xp)} xp** towards your next rank`)
         }
     })
@@ -406,7 +406,7 @@ cmd(['guild', 'lock'], async (ctx, user, arg1) => {
 
     const price = guildLock.price
     if(ctx.guild.balance < price)
-        return ctx.reply(user, `this guild doesn't have **${price}** ${ctx.symbols.tomato} required for a lock`, 'red')
+        return ctx.reply(user, `this guild doesn't have **${price}** ${ctx.symbols.avocado} required for a lock`, 'red')
 
     arg1 = arg1.replace('-', '')
     const col = bestColMatch(ctx, arg1)
@@ -435,10 +435,10 @@ cmd(['guild', 'lock'], async (ctx, user, arg1) => {
     if(future > now)
         return ctx.reply(user, `you can use lock in **${msToTime(future - now, { compact: true })}**`, 'red')
 
-    const question = `Do you want lock this guild to **${col.name}** using **${price}** ${ctx.symbols.tomato} ?
-        >>> This will add **${guildLock.maintenance}** ${ctx.symbols.tomato} to guild maintenance.
+    const question = `Do you want lock this guild to **${col.name}** using **${price}** ${ctx.symbols.avocado} ?
+        >>> This will add **${guildLock.maintenance}** ${ctx.symbols.avocado} to guild maintenance.
         Lock will be paused if guild balance goes negative.
-        Locking to another collection will cost **${price}** ${ctx.symbols.tomato}
+        Locking to another collection will cost **${price}** ${ctx.symbols.avocado}
         You won't be able to change lock for 7 days.
         You can unlock any time.
         Users will still be able to claim cards from general pool using \`->claim any\``

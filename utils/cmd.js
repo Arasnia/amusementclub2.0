@@ -100,11 +100,11 @@ module.exports = {
 //     console.log('help', args)
 // })
 
-// cmd('help', 'tomato', async (...args) => {
-//     console.log('help', 'tomato', args)
+// cmd('help', 'orange', async (...args) => {
+//     console.log('help', 'orange', args)
 // })
 
 // trigger(['help', 1, 2, 3])
 // trigger(['help', 'francesca', 2, 3])
-// trigger(['help', 'tomato', 1, 2, 3])
+// trigger(['help', 'orange', 1, 2, 3])
 

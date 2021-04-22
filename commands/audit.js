@@ -208,7 +208,7 @@ pcmd(['admin', 'auditor'], ['audit', 'trans'], async (ctx, user, ...arg) => {
 
     const resp = []
     resp.push(`Card: ${formatName(card)}`)
-    resp.push(`Price: **${trans.price}** ${ctx.symbols.tomato}`)
+    resp.push(`Price: **${trans.price}** ${ctx.symbols.avocado}`)
     resp.push(`From: **${trans.from}** \`${trans.from_id}\``)
     resp.push(`To: **${trans.to}** \`${trans.to_id}\``)
 
@@ -267,9 +267,9 @@ pcmd(['admin', 'auditor'], ['audit', 'auc'], ['audit', 'auction'], async (ctx, u
 
     const resp = []
     resp.push(`Seller: **${author.username}** \`${author.discord_id}\``)
-    resp.push(`Price: **${auc.price}** ${ctx.symbols.tomato}`)
+    resp.push(`Price: **${auc.price}** ${ctx.symbols.avocado}`)
     resp.push(`Card: ${formatName(card)}`)
-    resp.push(`Card value: **${await evalCard(ctx, card)}** ${ctx.symbols.tomato}`)
+    resp.push(`Card value: **${await evalCard(ctx, card)}** ${ctx.symbols.avocado}`)
 
     if(auc.finished)
         resp.push(`**This auction has finished! Finished at ${dateFormat(auc.expires, "yyyy-mm-dd HH:MM:ss")}**`)
@@ -326,7 +326,7 @@ pcmd(['admin', 'auditor'], ['audit', 'find', 'user'], async (ctx, user, ...args)
     let embed = {
         author: {name: `${user.username} here is the info for ${findUser.username}`},
         description: `**${findUser.username}** \`${findUser.discord_id}\`
-                      Tomatoes: **${findUser.exp}${ctx.symbols.tomato}** 
+                      avocado: **${findUser.exp}${ctx.symbols.avocado}** 
                       Vials: **${findUser.vials}${ctx.symbols.vial}**
                       Promo Currency: **${findUser.promoexp}**
                       Join Date: **${findUser.joined}**
@@ -410,7 +410,7 @@ pcmd(['admin', 'auditor'], ['audit', 'list'], ['audit', 'li'], ['audit', 'cards'
     const now = new Date()
     const cardstr = cards.map(c => {
         const isnew = c.obtained > (findUser.lastdaily || now)
-        return (isnew? '**[new]** ' : '') + formatName(c) + (c.amount > 1? ` (x${c.amount}) ` : ' ') + (c.rating? `[${c.rating}/10]` : '')
+        return (isnew? '**[✨]** ' : '') + formatName(c) + (c.amount > 1? ` (x${c.amount}) ` : ' ') + (c.rating? `[${c.rating}/10]` : '')
     })
 
     return ctx.pgn.addPagination(user.discord_id, ctx.msg.channel.id, {
