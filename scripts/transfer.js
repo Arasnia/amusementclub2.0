@@ -11,7 +11,7 @@ const Guild         = require('../collections/guild')
 const Cardinfo      = require('../collections/cardinfo')
 
 const main = async () => {
-    const mongoUri = 'mongodb://localhost:27017/cado2'
+    const mongoUri = 'mongodb://localhost:27017/amusement2'
     const mongoOpt = {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false}
     const mcn = await mongoose.connect(mongoUri, mongoOpt)
 
@@ -20,7 +20,7 @@ const main = async () => {
             console.error(err)
 
         try {
-            const db = conn.db('cado')
+            const db = conn.db('amusement')
             await colsCards(db)
             await users(db)
             await calcCardInfo(db)

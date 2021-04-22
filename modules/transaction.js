@@ -81,7 +81,7 @@ const confirm_trs = async (ctx, user, trs_id) => {
             return ctx.reply(user, `you don't have rights to confirm this transaction`, 'red')
 
         if(to_user.exp < transaction.price)
-            return ctx.reply(to_user, `you need **${Math.floor(transaction.price - to_user.exp)}** ${ctx.symbols.avocado} more to confirm this transaction`, 'red')
+            return ctx.reply(to_user, `you need **${Math.floor(transaction.price - to_user.exp)}** ${ctx.symbols.avoamusement} more to confirm this transaction`, 'red')
 
         addUserCard(to_user, card.id)
 
@@ -128,10 +128,10 @@ const confirm_trs = async (ctx, user, trs_id) => {
     })
 
     if(to_user) {
-        return ctx.reply(from_user, `sold **${formatName(ctx.cards[card.id])}** to **${transaction.to}** for **${transaction.price}** ${ctx.symbols.avocado}`)
+        return ctx.reply(from_user, `sold **${formatName(ctx.cards[card.id])}** to **${transaction.to}** for **${transaction.price}** ${ctx.symbols.avoamusement}`)
     }
 
-    return ctx.reply(user, `sold **${formatName(ctx.cards[card.id])}** to **${transaction.to}** for **${transaction.price}** ${ctx.symbols.avocado}`)
+    return ctx.reply(user, `sold **${formatName(ctx.cards[card.id])}** to **${transaction.to}** for **${transaction.price}** ${ctx.symbols.avoamusement}`)
 }
 
 const decline_trs = async (ctx, user, trs_id) => {

@@ -1,7 +1,7 @@
 {
-  "name": "cadoclub2.0",
+  "name": "amusementclub2.0",
   "version": "0.1.4",
-  "description": "Next version of cado Club discord gacha",
+  "description": "Next version of amusement Club discord gacha",
   "main": "index.js",
   "scripts": {
     "start": "nodemon test/index.js",

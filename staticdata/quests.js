@@ -11,7 +11,7 @@ module.exports = {
                 user.exp += 600
                 user.xp += 2
             },
-            reward: (ctx) => `**600** ${ctx.symbols.avocado} and **2** xp`
+            reward: (ctx) => `**600** ${ctx.symbols.avoamusement} and **2** xp`
         }, {
             id: 'claim8',
             name: 'Claim 8 cards today',
@@ -23,7 +23,7 @@ module.exports = {
                 user.exp += 1400
                 user.xp += 5
             },
-            reward: (ctx) => `**1400** ${ctx.symbols.avocado} and **5** xp`
+            reward: (ctx) => `**1400** ${ctx.symbols.avoamusement} and **5** xp`
         }, {
             id: 'bid2',
             name: 'Bid on 2 auctions today',
@@ -35,7 +35,7 @@ module.exports = {
                 user.exp += 1000
                 user.xp += 2
             },
-            reward: (ctx) => `**1000** ${ctx.symbols.avocado} and **2** xp`
+            reward: (ctx) => `**1000** ${ctx.symbols.avoamusement} and **2** xp`
         }, {
             id: 'bid5',
             name: 'Bid on 4 auctions today',
@@ -47,7 +47,7 @@ module.exports = {
                 user.exp += 2000
                 user.xp += 8
             },
-            reward: (ctx) => `**2000** ${ctx.symbols.avocado} and **8** xp`
+            reward: (ctx) => `**2000** ${ctx.symbols.avoamusement} and **8** xp`
         }, {
             id: 'forge1',
             name: 'Forge 1-star card',
@@ -60,7 +60,7 @@ module.exports = {
                 user.exp += 500
                 user.xp += 1
             },
-            reward: (ctx) => `**500** ${ctx.symbols.avocado} and **1** xp`
+            reward: (ctx) => `**500** ${ctx.symbols.avoamusement} and **1** xp`
         }, {
             id: 'forge2',
             name: 'Forge 2-star card',
@@ -74,7 +74,7 @@ module.exports = {
                 user.vials += 30
                 user.xp += 2
             },
-            reward: (ctx) => `**800** ${ctx.symbols.avocado}, **30** ${ctx.symbols.vial} and **2** xp`
+            reward: (ctx) => `**800** ${ctx.symbols.avoamusement}, **30** ${ctx.symbols.vial} and **2** xp`
         }, {
             id: 'forge3',
             name: 'Forge 3-star card',
@@ -88,7 +88,7 @@ module.exports = {
                 user.vials += 40
                 user.xp += 5
             },
-            reward: (ctx) => `**1000** ${ctx.symbols.avocado}, **40** ${ctx.symbols.vial} and **5** xp`
+            reward: (ctx) => `**1000** ${ctx.symbols.avoamusement}, **40** ${ctx.symbols.vial} and **5** xp`
         }, {
             id: 'tag2',
             name: 'Tag 2 cards',
@@ -100,7 +100,7 @@ module.exports = {
                 user.exp += 400
                 user.xp += 2
             },
-            reward: (ctx) => `**400** ${ctx.symbols.avocado} and **2** xp`
+            reward: (ctx) => `**400** ${ctx.symbols.avoamusement} and **2** xp`
         }, {
             id: 'tag4',
             name: 'Tag 4 cards',
@@ -112,7 +112,7 @@ module.exports = {
                 user.exp += 800
                 user.xp += 4
             },
-            reward: (ctx) => `**800** ${ctx.symbols.avocado} and **4** xp`
+            reward: (ctx) => `**800** ${ctx.symbols.avoamusement} and **4** xp`
         }, {
             id: 'liq2',
             name: 'Liquify 2 cards',
@@ -139,7 +139,7 @@ module.exports = {
                 user.vials += 60
                 user.xp += 3
             },
-            reward: (ctx) => `**1500** ${ctx.symbols.avocado}, **60** ${ctx.symbols.vial} and **3** xp`
+            reward: (ctx) => `**1500** ${ctx.symbols.avoamusement}, **60** ${ctx.symbols.vial} and **3** xp`
         },
     ],
 

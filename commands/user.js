@@ -69,9 +69,9 @@ cmd('bal', 'balance', (ctx, user) => {
 
     const embed = {
         color: colors.green,
-        description: `you have **${Math.round(user.exp)}** ${ctx.symbols.avocado} and **${Math.round(user.vials)}** ${ctx.symbols.vial}
-            Your next claim will cost **${claimCost(user, 0, 1)}** ${ctx.symbols.avocado}
-            ${ctx.guild? `Next claim in current guild: **${claimCost(user, ctx.guild.tax, 1)}** ${ctx.symbols.avocado} (+${ctx.guild.tax * 100}% claim tax)`:''}
+        description: `you have **${Math.round(user.exp)}** ${ctx.symbols.avoamusement} and **${Math.round(user.vials)}** ${ctx.symbols.vial}
+            Your next claim will cost **${claimCost(user, 0, 1)}** ${ctx.symbols.avoamusement}
+            ${ctx.guild? `Next claim in current guild: **${claimCost(user, ctx.guild.tax, 1)}** ${ctx.symbols.avoamusement} (+${ctx.guild.tax * 100}% claim tax)`:''}
             You can claim **${max - 1} cards** ${ctx.guild? `in current guild `:''}with your balance`
     }
 
@@ -229,8 +229,8 @@ cmd('daily', async (ctx, user) => {
         })
 
         return ctx.reply(user, {
-            description: `you received daily **${amount}** ${ctx.symbols.avocado} ${promo? `and **${promoAmount}** ${promo.currency}`: ""}
-                You now have **${Math.round(user.exp)}** ${ctx.symbols.avocado} ${promo? `and **${user.promoexp}** ${promo.currency}`: ""}`,
+            description: `you received daily **${amount}** ${ctx.symbols.avoamusement} ${promo? `and **${promoAmount}** ${promo.currency}`: ""}
+                You now have **${Math.round(user.exp)}** ${ctx.symbols.avoamusement} ${promo? `and **${user.promoexp}** ${promo.currency}`: ""}`,
             color: colors.green,
             fields
         })
@@ -464,7 +464,7 @@ cmd('achievements', 'ach', async (ctx, user) => {
 cmd('vote', async (ctx, user) => {
     return ctx.send(ctx.msg.channel.id, {
         color: colors.blue,
-        description: `You can vote for cado Club every 12 hours and get rewards.
+        description: `You can vote for amusement Club every 12 hours and get rewards.
         [Vote on top.gg](${ctx.dbl.url}) to get free cards.`
     }, user.discord_id)
 })

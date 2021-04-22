@@ -1,5 +1,5 @@
 const config    = require('./config')
-const cado = require('../index.js')
+const amusement = require('../index.js')
 const _         = require('lodash')
 
 const main = async () => {
@@ -21,7 +21,7 @@ const main = async () => {
 
     console.log(`Working with ${data.cards.length} cards and ${data.collections.length} collections`)
     const options  = Object.assign({shards: 1, data}, config)
-    const instance = await cado.create(options)
+    const instance = await amusement.create(options)
 
     await instance.connect()
 

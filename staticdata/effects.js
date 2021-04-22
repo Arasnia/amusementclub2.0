@@ -12,7 +12,7 @@ module.exports = [
     }, {
         id: 'cakeday',
         name: 'Cake Day',
-        desc: 'Get +100 avocado in your daily for every claim you did',
+        desc: 'Get +100 avoamusement in your daily for every claim you did',
         passive: true,
         animated: true
     }, {
@@ -24,7 +24,7 @@ module.exports = [
     }, {
         id: 'skyfriend',
         name: 'Skies Of Friendship',
-        desc: 'Get 10% avocado back from wins on auction',
+        desc: 'Get 10% avoamusement back from wins on auction',
         passive: true
     }, {
         id: 'cherrybloss',
@@ -147,7 +147,7 @@ module.exports = [
         use: async (ctx, user) => {
             const cost = claimCost(user, 0, 1, user.dailystats.claims - 1 || 0)
             user.exp += cost
-            return { msg: `you got **${cost}** ${ctx.symbols.avocado} back`, used: true }
+            return { msg: `you got **${cost}** ${ctx.symbols.avoamusement} back`, used: true }
         }
     }
 ]

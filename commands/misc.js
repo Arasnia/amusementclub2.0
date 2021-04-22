@@ -73,7 +73,7 @@ cmd('pat', async (ctx, user, ...args) => {
 
 cmd('invite', async (ctx, user) => {
     const embed = { 
-        title: `Invite cado Club`,
+        title: `Invite amusement Club`,
         description: `Please, read terms and conditions of using bot on your server by typing \`->help invite\` 
             After that [click here](${ctx.invite}) to invite the bot.`,
         color: colors.green
@@ -84,7 +84,7 @@ cmd('invite', async (ctx, user) => {
 
 const getHelpEmbed = (ctx, o, prefix) => {
 
-    const footerText = `cado Club Alexandrite | xQAxThF | v${pjson.version} | by NoxCaos#4905`
+    const footerText = `amusement Club Alexandrite | xQAxThF | v${pjson.version} | by NoxCaos#4905`
     const embed = {
         title: o.title, 
         description: o.description.replace(/->/g, prefix), fields: [],

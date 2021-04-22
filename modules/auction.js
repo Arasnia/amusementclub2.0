@@ -102,17 +102,17 @@ const bid_auc = async (ctx, user, auc, bid) => {
 
         if(lastBidder.discord_id != user.discord_id) {
             await ctx.direct(lastBidder, `Another player has outbid you on card ${formatName(ctx.cards[auc.card])}
-                To remain in the auction, try bidding higher than ${auc.price} ${ctx.symbols.avocado}
+                To remain in the auction, try bidding higher than ${auc.price} ${ctx.symbols.avoamusement}
                 Use \`->auc bid ${auc.id} [new bid]\`
                 This auction will end in **${diff > 60000? msToTime(diff) : '<1m'}**`, 'yellow')
         }
     } else {
         const author = await fetchOnly(auc.author)
         await ctx.direct(author, `a player has bid on your auction \`${auc.id}\` for card 
-            ${formatName(ctx.cards[auc.card])} with minimum ${auc.price} ${ctx.symbols.avocado}!`, 'green')
+            ${formatName(ctx.cards[auc.card])} with minimum ${auc.price} ${ctx.symbols.avoamusement}!`, 'green')
     }
 
-    return ctx.reply(user, `you successfully bid on auction \`${auc.id}\` with **${bid}** ${ctx.symbols.avocado}!`)
+    return ctx.reply(user, `you successfully bid on auction \`${auc.id}\` with **${bid}** ${ctx.symbols.avoamusement}!`)
 }
 
 const finish_aucs = async (ctx, now) => {
@@ -165,10 +165,10 @@ const finish_aucs = async (ctx, now) => {
         await author.save()
         await from_auc(auc, author, lastBidder)
 
-        await ctx.direct(author, `you sold ${formatName(ctx.cards[auc.card])} on auction \`${auc.id}\` for **${auc.price}** ${ctx.symbols.avocado}`)
+        await ctx.direct(author, `you sold ${formatName(ctx.cards[auc.card])} on auction \`${auc.id}\` for **${auc.price}** ${ctx.symbols.avoamusement}`)
         return ctx.direct(lastBidder, `you won auction \`${auc.id}\` for card ${formatName(ctx.cards[auc.card])}!
-            You ended up paying **${Math.round(auc.price)}** ${ctx.symbols.avocado} and got **${Math.round(auc.highbid - auc.price)}** ${ctx.symbols.avocado} back.
-            ${tback > 0? `You got additional **${tback}** ${ctx.symbols.avocado} from your equipped effect` : ''}`)
+            You ended up paying **${Math.round(auc.price)}** ${ctx.symbols.avoamusement} and got **${Math.round(auc.highbid - auc.price)}** ${ctx.symbols.avoamusement} back.
+            ${tback > 0? `You got additional **${tback}** ${ctx.symbols.avoamusement} from your equipped effect` : ''}`)
     } else {
         if(!findSell){
             const sellDB = await new AuditAucSell()
@@ -205,7 +205,7 @@ const paginate_auclist = (ctx, user, list) => {
             char = ctx.symbols.auc_sod
         }
 
-        pages[Math.floor(i/10)] += `${char} [${diffstr}] \`${auc.id}\` [${auc.price}${ctx.symbols.avocado}] ${formatName(ctx.cards[auc.card])}\n`
+        pages[Math.floor(i/10)] += `${char} [${diffstr}] \`${auc.id}\` [${auc.price}${ctx.symbols.avoamusement}] ${formatName(ctx.cards[auc.card])}\n`
     })
 
     return pages;
@@ -220,11 +220,11 @@ const format_auc = async(ctx, auc, author, doeval = true) => {
 
     const resp = []
     resp.push(`Seller: **${author.username}**`)
-    resp.push(`Price: **${auc.price}** ${ctx.symbols.avocado}`)
+    resp.push(`Price: **${auc.price}** ${ctx.symbols.avoamusement}`)
     resp.push(`Card: ${formatName(card)}`)
 
     if(doeval)
-        resp.push(`Card value: **${await evalCard(ctx, card)}** ${ctx.symbols.avocado}`)
+        resp.push(`Card value: **${await evalCard(ctx, card)}** ${ctx.symbols.avoamusement}`)
 
     if(auc.finished)
         resp.push(`**This auction has finished**`)

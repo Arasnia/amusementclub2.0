@@ -76,8 +76,8 @@ cmd('claim', 'cl', async (ctx, user, ...args) => {
         return ctx.reply(user, `you can claim only **10** or less cards with one command`, 'red')
 
     if(!promo && price > user.exp)
-        return ctx.reply(user, `you need **${price}** ${ctx.symbols.avocado} to claim ${amount > 1? amount + ' cards' : 'a card'}. 
-            You have **${Math.floor(user.exp)}** ${ctx.symbols.avocado}`, 'red')
+        return ctx.reply(user, `you need **${price}** ${ctx.symbols.avoamusement} to claim ${amount > 1? amount + ' cards' : 'a card'}. 
+            You have **${Math.floor(user.exp)}** ${ctx.symbols.avoamusement}`, 'red')
 
     if(promo && price > user.promoexp)
         return ctx.reply(user, `you need **${price}** ${promo.currency} to claim ${amount > 1? amount + ' cards' : 'a card'}. 
@@ -114,7 +114,7 @@ cmd('claim', 'cl', async (ctx, user, ...args) => {
     
     cards.sort((a, b) => b.card.level - a.card.level)
 
-    let curr = ctx.symbols.avocado, max = 1
+    let curr = ctx.symbols.avoamusement, max = 1
     const extra = Math.round(price * .25)
     const newCards = cards.filter(x => x.count === 1)
     const oldCards = cards.filter(x => x.count > 1)
@@ -289,9 +289,9 @@ cmd('sell', withCards(async (ctx, user, cards, parsedargs) => {
 
     let question = ""
     if(trs.to != 'bot') {
-        question = `**${trs.to}**, **${trs.from}** wants to sell you **${formatName(card)}** for **${price}** ${ctx.symbols.avocado}`
+        question = `**${trs.to}**, **${trs.from}** wants to sell you **${formatName(card)}** for **${price}** ${ctx.symbols.avoamusement}`
     } else {
-        question = `**${trs.from}**, do you want to sell **${formatName(card)}** to **bot** for **${price}** ${ctx.symbols.avocado} ?`
+        question = `**${trs.from}**, do you want to sell **${formatName(card)}** to **bot** for **${price}** ${ctx.symbols.avoamusement} ?`
         perms.confirm.push(user.discord_id)
     }
 
@@ -310,7 +310,7 @@ cmd('eval', withGlobalCards(async (ctx, user, cards, parsedargs) => {
     const price = await evalCard(ctx, card)
     const vials = await getVialCost(ctx, card, price)
     return ctx.reply(user, 
-        `card ${formatName(card)} is worth: **${price}** ${ctx.symbols.avocado} ${card.level < 4? `or **${vials}** ${ctx.symbols.vial}` : ``}`)
+        `card ${formatName(card)} is worth: **${price}** ${ctx.symbols.avoamusement} ${card.level < 4? `or **${vials}** ${ctx.symbols.vial}` : ``}`)
 }))
 
 cmd('fav', withCards(async (ctx, user, cards, parsedargs) => {
@@ -411,7 +411,7 @@ cmd('info', ['card', 'info'], withGlobalCards(async (ctx, user, cards, parsedarg
 
     resp.push(formatName(card))
     resp.push(`Fandom: **${col.name}**`)
-    resp.push(`Price: **${price}** ${ctx.symbols.avocado}`)
+    resp.push(`Price: **${price}** ${ctx.symbols.avoamusement}`)
 
     if(extrainfo.ratingsum > 0)
         resp.push(`Average Rating: **${(extrainfo.ratingsum / extrainfo.usercount).toFixed(2)}**`)

@@ -171,20 +171,20 @@ cmd(['auc', 'sell'], withCards(async (ctx, user, cards, parsedargs) => {
             return ctx.reply(user, `impossible to proceed with confirmation: ${formatName(card)} not found in your list`, 'red')
 
         if(price < min)
-            return ctx.reply(user, `you can't set price less than **${min}** ${ctx.symbols.avocado} for this card`, 'red')
+            return ctx.reply(user, `you can't set price less than **${min}** ${ctx.symbols.avoamusement} for this card`, 'red')
 
         if(price > max)
-            return ctx.reply(user, `you can't set price higher than **${max}** ${ctx.symbols.avocado} for this card`, 'red')
+            return ctx.reply(user, `you can't set price higher than **${max}** ${ctx.symbols.avoamusement} for this card`, 'red')
 
         if(user.exp < fee)
-            return ctx.reply(user, `you have to have at least **${fee}** ${ctx.symbols.avocado} to auction for that price`, 'red')
+            return ctx.reply(user, `you have to have at least **${fee}** ${ctx.symbols.avoamusement} to auction for that price`, 'red')
 
         if(usercard.fav && usercard.amount === 1)
             return ctx.reply(user, `you are about to put up last copy of your favourite card for sale. 
                 Please, use \`->fav remove ${card.name}\` to remove it from favourites first`, 'yellow')
     }
 
-    const question = `Do you want to sell ${formatName(card)} on auction for ${price} ${ctx.symbols.avocado}? 
+    const question = `Do you want to sell ${formatName(card)} on auction for ${price} ${ctx.symbols.avoamusement}? 
         ${timenum? `This auction will last **${time} hours**` : ''}
         ${card.amount > 1? '' : 'This is the only copy that you have'}
         ${(card.amount == 1 && card.rating)? 'You will lose your rating for this card' : ''}`
@@ -211,7 +211,7 @@ cmd(['auc', 'sell'], withCards(async (ctx, user, cards, parsedargs) => {
                     price,
             })
 
-            ctx.reply(user, `you put ${formatName(card)} on auction for **${price}** ${ctx.symbols.avocado}
+            ctx.reply(user, `you put ${formatName(card)} on auction for **${price}** ${ctx.symbols.avoamusement}
                 Auction ID: \`${auc.id}\``)
         },
     })
@@ -239,7 +239,7 @@ cmd(['auc', 'bid'], 'bid', async (ctx, user, ...args) => {
         return ctx.reply(user, `auction with ID \`${id}\` wasn't found`, 'red')
 
     if(user.exp < bid)
-        return ctx.reply(user, `you don't have \`${bid}\` ${ctx.symbols.avocado} to bid`, 'red')        
+        return ctx.reply(user, `you don't have \`${bid}\` ${ctx.symbols.avoamusement} to bid`, 'red')        
 
     if(auc.expires < now || auc.finished)
         return ctx.reply(user, `auction \`${auc.id}\` already finished`, 'red')
@@ -248,7 +248,7 @@ cmd(['auc', 'bid'], 'bid', async (ctx, user, ...args) => {
         return ctx.reply(user, `you cannot bid on your own auction`, 'red')
 
     if(auc.price >= bid)
-        return ctx.reply(user, `your bid should be higher than **${auc.price}** ${ctx.symbols.avocado}`, 'red')
+        return ctx.reply(user, `your bid should be higher than **${auc.price}** ${ctx.symbols.avoamusement}`, 'red')
 
     if(auc.lastbidder === user.discord_id)
         return ctx.reply(user, `you already have the highest bid on this auction`, 'red')
