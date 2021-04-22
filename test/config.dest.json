@@ -1,8 +1,8 @@
 {
     "token": "DISCORD_VALID_BOT_TOKEN_GOES_HERE",
-    "database": "mongodb://localhost/amusement",
+    "database": "mongodb://localhost/cado",
     "prefix": "->",
-    "baseurl": "https://amusementclub.nyc3.digitaloceanspaces.com",
+    "baseurl": "https://cadoclub.nyc3.digitaloceanspaces.com",
     "shorturl": "https://amuse.noxc.dev",
     "daily": 72000000,
     "debug": true,

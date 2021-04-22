@@ -464,7 +464,7 @@ cmd('achievements', 'ach', async (ctx, user) => {
 cmd('vote', async (ctx, user) => {
     return ctx.send(ctx.msg.channel.id, {
         color: colors.blue,
-        description: `You can vote for Amusement Club every 12 hours and get rewards.
+        description: `You can vote for cado Club every 12 hours and get rewards.
         [Vote on top.gg](${ctx.dbl.url}) to get free cards.`
     }, user.discord_id)
 })

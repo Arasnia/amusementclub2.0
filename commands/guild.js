@@ -427,7 +427,7 @@ cmd(['guild', 'lock'], async (ctx, user, arg1) => {
         const ocol = byAlias(ctx, ctx.guild.overridelock)[0]
         return ctx.reply(user, `this guild is already locked to **${ocol.name}** using lock override.
             Override can be removed only by bot moderator.
-            If you wish override to be removed, please ask in [Amusement Café](${ctx.cafe})`, 'red')
+            If you wish override to be removed, please ask in [cado Café](${ctx.cafe})`, 'red')
     }
 
     const now = new Date()

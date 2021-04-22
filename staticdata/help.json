@@ -1,8 +1,8 @@
 [
     {
         "type": ["general"],
-        "title": "\u2B50 Amusement Club \u2B50 RPG Gacha",
-        "description": "Amusement Club is a global gacha game for Discord with thousands of cute and fancy cards made by the bot's community. You can get started on any server by typing `->claim` in a bot channel. Each claim will cost you more `🧁` avocado (in-game currency) `->daily` will reset your claim cost and give you extra avocado.\n\nIf you need help with setting up bot channel or setting custom prefix on your server, use `->help server`",
+        "title": "\u2B50 cado Club \u2B50 RPG Gacha",
+        "description": "cado Club is a global gacha game for Discord with thousands of cute and fancy cards made by the bot's community. You can get started on any server by typing `->claim` in a bot channel. Each claim will cost you more `🧁` avocado (in-game currency) `->daily` will reset your claim cost and give you extra avocado.\n\nIf you need help with setting up bot channel or setting custom prefix on your server, use `->help server`",
         "fields": [
             {
                 "title": "User",
@@ -21,7 +21,7 @@
             },
             {
                 "title": "Contacts",
-                "description": "[Bot Discord](https://discord.gg/kqgAvdX) | [Source Code](https://github.com/NoxCaos/amusementclub2.0) | [Keep Bot Running](https://ko-fi.com/noxcaos/)"
+                "description": "[Bot Discord](https://discord.gg/kqgAvdX) | [Source Code](https://github.com/NoxCaos/cadoclub2.0) | [Keep Bot Running](https://ko-fi.com/noxcaos/)"
             },
             {
                 "title": "Running",
@@ -160,7 +160,7 @@
     {
         "type": ["channel"],
         "title": "About bot channels",
-        "description": "Amusement Club is a discord bot that can read commands from any channel. However, there are some limitations",
+        "description": "cado Club is a discord bot that can read commands from any channel. However, there are some limitations",
         "fields": [
             {
                 "title": "Any channel",
@@ -233,7 +233,7 @@
     {
         "type": ["craft", "forge"],
         "title": "About card forging",
-        "description": "This command allows you to get new cards using cards that you have. Forge will consume old cards. \n If you got here with `->help craft` and are looking for craft cards. They are no longer a part of Amusement Club, see `->help effects` for the replacement(s)",
+        "description": "This command allows you to get new cards using cards that you have. Forge will consume old cards. \n If you got here with `->help craft` and are looking for craft cards. They are no longer a part of cado Club, see `->help effects` for the replacement(s)",
         "fields": [
             {
                 "title": "Forging Cards",
@@ -391,7 +391,7 @@
     {
         "type": ["guild", "server"],
         "title": "Guild commands",
-        "description": "You can set custom prefix/bot channels for Amusement Club as well as manage guild(server) level settings.",
+        "description": "You can set custom prefix/bot channels for cado Club as well as manage guild(server) level settings.",
         "fields": [
             {
                 "title": "Useful to know",
@@ -526,11 +526,11 @@
     {
         "type": ["invite"],
         "title": "About bot invitation",
-        "description": "You can add Amusement Club to any other server. Type `->invite` to get an invite link with all permissions set up.",
+        "description": "You can add cado Club to any other server. Type `->invite` to get an invite link with all permissions set up.",
         "fields": [
             {
                 "title": "Setting up your server",
-                "description": "The channel where you run your first command becomes bot channel.\n`->guild info` will show you the list of bot channels. You can set a bot channel by typing `->guild set bot` in that channel. `->guild unset bot` will remove bot perms from current channel.\nDon't remove 'send messages' permission from channels where you want `->summon` to work.\nIf you want to exclude Amusement Club from other bot channel, make sure you remove **both** 'read' and 'send' permissions. If you leave 'read messages' permission on, bot will still read commands, but won't be able to respond which can lead to confusion and loss of avocado"
+                "description": "The channel where you run your first command becomes bot channel.\n`->guild info` will show you the list of bot channels. You can set a bot channel by typing `->guild set bot` in that channel. `->guild unset bot` will remove bot perms from current channel.\nDon't remove 'send messages' permission from channels where you want `->summon` to work.\nIf you want to exclude cado Club from other bot channel, make sure you remove **both** 'read' and 'send' permissions. If you leave 'read messages' permission on, bot will still read commands, but won't be able to respond which can lead to confusion and loss of avocado"
             },
             {
                 "title": "Channel Privacy (2018-05-28)",
@@ -595,7 +595,7 @@
     {
         "type": ["query"],
         "title": "Card query",
-        "description": "In the help messages you will often see `[card query]`. But what does it mean?\n In Amusement Club you can get cards in any request type (except `forge`) by using different card parameters. Those parameters can be also combined",
+        "description": "In the help messages you will often see `[card query]`. But what does it mean?\n In cado Club you can get cards in any request type (except `forge`) by using different card parameters. Those parameters can be also combined",
         "fields": [
             {
                 "title": "->cards [some name]",
