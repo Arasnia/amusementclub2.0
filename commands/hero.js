@@ -48,6 +48,9 @@ cmd(['hero'], withUserEffects(async (ctx, user, effects, ...args) => {
     embed.fields = [
         { name: `Effect Card slot 1`, value: formatUserEffect(ctx, user, effects.find(x => x.id === user.heroslots[0])) || 'Empty' },
         { name: `Effect Card slot 2`, value: formatUserEffect(ctx, user, effects.find(x => x.id === user.heroslots[1])) || 'Empty' },
+        { name: `Effect Card slot 3`, value: formatUserEffect(ctx, user, effects.find(x => x.id === user.heroslots[2])) || 'Empty' },
+        { name: `Effect Card slot 4`, value: formatUserEffect(ctx, user, effects.find(x => x.id === user.heroslots[3])) || 'Empty' },
+        { name: `Effect Card slot 5`, value: formatUserEffect(ctx, user, effects.find(x => x.id === user.heroslots[4])) || 'Empty' },
     ]
 
     return ctx.send(ctx.msg.channel.id, embed, user.discord_id)
@@ -186,7 +189,7 @@ cmd(['slots'], ['hero', 'slots'], withUserEffects(async (ctx, user, effects, ...
     return ctx.pgn.addPagination(user.discord_id, ctx.msg.channel.id, {
         pages,
         buttons: ['back', 'forward'],
-        switchPage: (data) => data.embed.fields[2].value = data.pages[data.pagenum],
+        switchPage: (data) => data.embed.fields[5].value = data.pages[data.pagenum],
         embed: {
             description: `**${hero.name}** card slots:
                 (\`+hero equip [slot] [passive]\` to equip passive Effect Card)`,
@@ -195,8 +198,17 @@ cmd(['slots'], ['hero', 'slots'], withUserEffects(async (ctx, user, effects, ...
                 { name: `Slot 1`, value: `[${user.herocooldown[0] > now? msToTime(user.herocooldown[0] - now, {compact:true}) : '--' }] ${
                     formatUserEffect(ctx, user, effects.find(x => x.id === user.heroslots[0])) || 'Empty'
                 }`},
-                { name: `Slot 2`, value: `[${user.herocooldown[1] > now? msToTime(user.herocooldown[1] - now, {compact:true}) : '--' }] ${
+                { name: `Slot 2`, value: `[${user.herocooldown[0] > now? msToTime(user.herocooldown[0] - now, {compact:true}) : '--' }] ${
                     formatUserEffect(ctx, user, effects.find(x => x.id === user.heroslots[1])) || 'Empty'
+                }`},
+                { name: `Slot 3`, value: `[${user.herocooldown[0] > now? msToTime(user.herocooldown[0] - now, {compact:true}) : '--' }] ${
+                    formatUserEffect(ctx, user, effects.find(x => x.id === user.heroslots[2])) || 'Empty'
+                }`},
+                { name: `Slot 4`, value: `[${user.herocooldown[0] > now? msToTime(user.herocooldown[0] - now, {compact:true}) : '--' }] ${
+                    formatUserEffect(ctx, user, effects.find(x => x.id === user.heroslots[3])) || 'Empty'
+                }`},
+                { name: `Slot 5`, value: `[${user.herocooldown[0] > now? msToTime(user.herocooldown[0] - now, {compact:true}) : '--' }] ${
+                    formatUserEffect(ctx, user, effects.find(x => x.id === user.heroslots[4])) || 'Empty'
                 }`},
                 { name: `All passives`, value: '' }
             ]
