@@ -213,7 +213,7 @@ pcmd(['admin'], ['sudo', 'embargo'], async (ctx, user, ...args) => {
             rpl.push(`${target.username} has been lifted`)
             await target.save()
             try {
-                await ctx.direct(target, "Your embargo has been lifted, you may now return to normal bot usage. Please try to follow the rules, they can easily be found at \`->rules\`")
+                await ctx.direct(target, "Your embargo has been lifted, you may now return to normal bot usage. Please try to follow the rules, they can easily be found at \`+rules\`")
             } catch(e) {
                 rpl.push(`\n ${target.username} doesn't allow PMs from the bot, so a message was not sent`)
             }

@@ -157,8 +157,8 @@ const uses = {
             image: { url: `${ctx.baseurl}/effects/${effect.id}.gif` },
             color: colors.blue,
             description: `you got **${effect.name}** ${effect.passive? 'passive':'usable'} Effect Card!
-                ${effect.passive? `To use this passive effect equip it with \`->hero equip [slot] ${effect.id}\``:
-                `Use this effect by typing \`->hero use ${effect.id}\`. Amount of uses is limited to **${item.lasts}**`}`
+                ${effect.passive? `To use this passive effect equip it with \`+hero equip [slot] ${effect.id}\``:
+                `Use this effect by typing \`+hero use ${effect.id}\`. Amount of uses is limited to **${item.lasts}**`}`
         })
     }
 }
@@ -248,7 +248,7 @@ const checks = {
         const effect = ctx.effects.find(x => x.id === item.effectid)
         if(!item.cards.reduce((val, x) => val && user.cards.some(y => y.id === x), true))
             return `you don't have all required cards in order to use this item.
-                Type \`->inv info ${item.id}\` to see the list of required cards`
+                Type \`+inv info ${item.id}\` to see the list of required cards`
         
         for(let i = 0; i < item.cards.length; i++) {
             const itemCardID = item.cards[i]
@@ -257,7 +257,7 @@ const checks = {
             if(userCard.fav && userCard.amount === 1) { 
                 const card = ctx.cards.find(y => y.id === itemCardID)
                 return `the last copy of required card ${formatName(card)} is marked as favourite.
-                    Please, use \`->fav remove ${card.name}\` to remove it from favourites first`
+                    Please, use \`+fav remove ${card.name}\` to remove it from favourites first`
             }
         }
     }

@@ -38,7 +38,7 @@ cmd(['forge'], withMultiQuery(async (ctx, user, cards, parsedargs) => {
     const hub = getBuilding(ctx, 'smithhub')
 
     if(!hub)
-        return ctx.reply(user, `forging is possible only in the guild with **Smithing Hub level 1+**. Buy one in the \`->store\``, 'red')
+        return ctx.reply(user, `forging is possible only in the guild with **Smithing Hub level 1+**. Buy one in the \`+store\``, 'red')
 
     const card1 = bestMatch(cards[0])
     let card2 = bestMatch(cards[1])
@@ -141,7 +141,7 @@ cmd('liq', 'liquify', withCards(async (ctx, user, cards, parsedargs) => {
 
     if(card.fav && card.amount === 1)
         return ctx.reply(user, `you are about to put up last copy of your favourite card for sale. 
-            Please, use \`->fav remove ${card.name}\` to remove it from favourites first`, 'yellow')
+            Please, use \`+fav remove ${card.name}\` to remove it from favourites first`, 'yellow')
 
     const question = `Do you want to liquify ${formatName(card)} into **${vials}** ${ctx.symbols.vial}?
         ${card.amount === 1? 'This is the last copy that you have' : `You will have **${card.amount - 1}** card(s) left`}`
@@ -162,7 +162,7 @@ cmd('liq', 'liquify', withCards(async (ctx, user, cards, parsedargs) => {
 
                 ctx.reply(user, `card ${formatName(card)} was liquified. You got **${vials}** ${ctx.symbols.vial}
                     You have **${user.vials}** ${ctx.symbols.vial}
-                    You can use vials to draw **any 1-3 ${ctx.symbols.star}** card that you want. Use \`->draw\``)
+                    You can use vials to draw **any 1-3 ${ctx.symbols.star}** card that you want. Use \`+draw\``)
             } catch(e) {
                 return ctx.reply(user, `an error occured while executing this command. 
                     Please try again`, 'red')

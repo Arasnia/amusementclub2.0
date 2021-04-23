@@ -102,7 +102,7 @@ const users = async (db) => {
         console.log(`[#${count}] Processing Guild ${g.id}...`)
         const newg = await new Guild()
         newg.id = g.id
-        newg.prefix = g.prefix || '->'
+        newg.prefix = g.prefix || '+'
         newg.botchannels = g.botChannels
         newg.xp = 100
         newg.balance = 5000

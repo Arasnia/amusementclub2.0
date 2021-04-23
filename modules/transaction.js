@@ -174,7 +174,7 @@ const format_listtrs = (ctx, user, trans) => {
     const isget = trans.from_id != user.discord_id
 
     resp += `[${timediff}] ${ch_map[trans.status]} \`${trans.id}\` ${formatName(ctx.cards[trans.card])}`
-    resp += isget ? ` \`<-\` **${trans.from}**` : ` \`->\` **${trans.to}**`;
+    resp += isget ? ` \`<-\` **${trans.from}**` : ` \`+\` **${trans.to}**`;
     return resp;
 }
 

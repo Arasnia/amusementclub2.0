@@ -39,7 +39,7 @@ module.exports = [
     }, {
         id: 'rulerjeanne',
         name: 'The Ruler Jeanne',
-        desc: 'Get `->daily` every 17 hours instead of 20',
+        desc: 'Get `+daily` every 17 hours instead of 20',
         passive: true
     }, {
         id: 'spellcard',

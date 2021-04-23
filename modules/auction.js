@@ -103,7 +103,7 @@ const bid_auc = async (ctx, user, auc, bid) => {
         if(lastBidder.discord_id != user.discord_id) {
             await ctx.direct(lastBidder, `Another player has outbid you on card ${formatName(ctx.cards[auc.card])}
                 To remain in the auction, try bidding higher than ${auc.price} ${ctx.symbols.avoamusement}
-                Use \`->auc bid ${auc.id} [new bid]\`
+                Use \`+auc bid ${auc.id} [new bid]\`
                 This auction will end in **${diff > 60000? msToTime(diff) : '<1m'}**`, 'yellow')
         }
     } else {

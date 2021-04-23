@@ -181,7 +181,7 @@ cmd(['auc', 'sell'], withCards(async (ctx, user, cards, parsedargs) => {
 
         if(usercard.fav && usercard.amount === 1)
             return ctx.reply(user, `you are about to put up last copy of your favourite card for sale. 
-                Please, use \`->fav remove ${card.name}\` to remove it from favourites first`, 'yellow')
+                Please, use \`+fav remove ${card.name}\` to remove it from favourites first`, 'yellow')
     }
 
     const question = `Do you want to sell ${formatName(card)} on auction for ${price} ${ctx.symbols.avoamusement}? 

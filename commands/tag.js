@@ -45,7 +45,7 @@ cmd('tag', withTag(async (ctx, user, card, tag, tgTag, parsedargs) => {
 
     const check = () => {
        if(user.ban && user.ban.tags > 2)
-            return ctx.reply(user, `you were banned from adding tags. To address this issue use \`->help support\``, 'red')
+            return ctx.reply(user, `you were banned from adding tags. To address this issue use \`+help support\``, 'red')
 
         if(ctx.filter.isProfane(tgTag))
             return ctx.reply(user, `your tag contains excluded words`, 'red')
@@ -223,7 +223,7 @@ pcmd(['admin', 'mod', 'tagmod'], ['tag', 'ban'],
 
     try {
         await ctx.direct(target, `your tag **#${tgTag}** for ${formatName(card)} has been banned by moderator.
-            Please make sure you add valid tags in the future. Learn more with \`->help tag\`
+            Please make sure you add valid tags in the future. Learn more with \`+help tag\`
             You have **${3 - target.ban.tags}** warning(s) remaining`, 'red')
     } catch {
         ctx.reply(user, `failed to send a warning to the user.`, 'red')

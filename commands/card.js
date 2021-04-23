@@ -245,14 +245,14 @@ cmd('sell', withCards(async (ctx, user, cards, parsedargs) => {
     if(!targetuser && pendingto.length > 0)
         return ctx.reply(user, `you already have pending transaction to **BOT**. 
             First resolve transaction \`${pending[0].id}\`
-            Type \`->trans info ${pending[0].id}\` to see more information
-            \`->confirm ${pending[0].id}\` to confirm
-            \`->decline ${pending[0].id}\` to decline`, 'red')
+            Type \`+trans info ${pending[0].id}\` to see more information
+            \`+confirm ${pending[0].id}\` to confirm
+            \`+decline ${pending[0].id}\` to decline`, 'red')
     else if(pendingto.length >= 5)
         return ctx.reply(user, `you already have pending transactions to **${pendingto[0].to}**. 
             You can have up to **5** pending transactions to the same user.
-            Type \`->pending\` to see them
-            \`->decline [id]\` to decline`, 'red')
+            Type \`+pending\` to see them
+            \`+decline [id]\` to decline`, 'red')
 
     cards = cards.filter(x => !pending.some(y => y.card === x.id))
     if(cards.length === 0) {
@@ -271,12 +271,12 @@ cmd('sell', withCards(async (ctx, user, cards, parsedargs) => {
                 You have **${cursales.length}** copies that are already on sale (${cursales.map(x => `\`${x.id}\``).join(' | ')})`, 'red')
         else if(diff === 1 && usercard.fav)
             return ctx.reply(user, `you are about to put up last copy of your favourite card for sale. 
-                Please, use \`->fav remove ${card.name}\` to remove it from favourites first`, 'yellow')
+                Please, use \`+fav remove ${card.name}\` to remove it from favourites first`, 'yellow')
     }
 
     if(usercard.fav && usercard.amount === 1) {
         return ctx.reply(user, `you are about to put up last copy of your favourite card for sale. 
-            Please, use \`->fav remove ${card.name}\` to remove it from favourites first`, 'yellow')
+            Please, use \`+fav remove ${card.name}\` to remove it from favourites first`, 'yellow')
     }
 
     if(!ctx.msg.channel.guild)
@@ -449,7 +449,7 @@ cmd('boost', 'boosts', (ctx, user) => {
     }
 
     const description = boosts.map(x => 
-        `[${msToTime(x.expires - now, {compact: true})}] **${x.rate * 100}%** drop rate for **${x.name}** when you run \`->claim ${x.id}\` (${x.cards.length} cards in pool)`).join('\n')
+        `[${msToTime(x.expires - now, {compact: true})}] **${x.rate * 100}%** drop rate for **${x.name}** when you run \`+claim ${x.id}\` (${x.cards.length} cards in pool)`).join('\n')
 
     return ctx.send(ctx.msg.channel.id, {
         description,

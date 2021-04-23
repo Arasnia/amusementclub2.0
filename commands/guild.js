@@ -101,7 +101,7 @@ cmd(['guild', 'info'], async (ctx, user, ...args) => {
 cmd(['guild', 'status'], (ctx, user) => {
     const castle = ctx.guild.buildings.find(x => x.id === 'castle')
     if(!castle)
-        return ctx.reply(user, 'status check only possible in guild that has **Guild Castle**. Buy one in the `->store`', 'red')
+        return ctx.reply(user, 'status check only possible in guild that has **Guild Castle**. Buy one in the `+store`', 'red')
 
     const resp = []
     const cost = getMaintenanceCost(ctx)
@@ -234,7 +234,7 @@ cmd(['guild', 'donate'], async (ctx, user, arg1) => {
     const castle = ctx.guild.buildings.find(x => x.id === 'castle')
 
     if(!castle)
-        return ctx.reply(user, '**Guild Castle** is required before you can donate. Buy one in the `->store`', 'red')
+        return ctx.reply(user, '**Guild Castle** is required before you can donate. Buy one in the `+store`', 'red')
 
     if(!amount)
         return ctx.reply(user, `please enter amount of ${ctx.symbols.avoamusement} you want to donate to this guild`, 'red')
@@ -269,7 +269,7 @@ cmd(['guild', 'set', 'tax'], async (ctx, user, arg1) => {
     const castle = ctx.guild.buildings.find(x => x.id === 'castle')
 
     if(!castle)
-        return ctx.reply(user, '**Guild Castle** is required to set claim tax. Buy one in the `->store`', 'red')
+        return ctx.reply(user, '**Guild Castle** is required to set claim tax. Buy one in the `+store`', 'red')
 
     if(!isUserOwner(ctx, user) && !isUserManager(ctx, user) && !user.roles.includes('admin'))
         return ctx.reply(user, `only server owner can modify guild tax`, 'red')
@@ -441,7 +441,7 @@ cmd(['guild', 'lock'], async (ctx, user, arg1) => {
         Locking to another collection will cost **${price}** ${ctx.symbols.avoamusement}
         You won't be able to change lock for 7 days.
         You can unlock any time.
-        Users will still be able to claim cards from general pool using \`->claim any\``
+        Users will still be able to claim cards from general pool using \`+claim any\``
 
     return ctx.pgn.addConfirmation(user.discord_id, ctx.msg.channel.id, {
         question,

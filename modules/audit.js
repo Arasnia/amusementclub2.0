@@ -91,7 +91,7 @@ const formatGuildTrsList = (ctx, user, gtrans) => {
     const timediff = msToTime(new Date() - gtrans.time, {compact: true})
 
     resp += `[${timediff}] ${ch_map[gtrans.status]} \`${gtrans.id}\` ${formatName(ctx.cards[gtrans.card])}`
-    resp += `**${gtrans.from}** \`->\` **${gtrans.to}**`
+    resp += `**${gtrans.from}** \`+\` **${gtrans.to}**`
     return resp;
 }
 

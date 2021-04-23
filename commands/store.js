@@ -20,7 +20,7 @@ cmd('store', 'shop', async (ctx, user, cat) => {
             title: `Welcome to the store!`,
             color: colors.deepgreen,
             description: `please select one of the categories and type 
-                \`->store [category]\` to view the items\n
+                \`+store [category]\` to view the items\n
                 ${cats.map((x, i) => `${i + 1}. ${x}`).join('\n')}`
             })
 
@@ -31,8 +31,8 @@ cmd('store', 'shop', async (ctx, user, cat) => {
         description: items[0].typedesc,
         fields: [{
             name: `Usage`,
-            value: `To view the item details use \`->store info [item id]\`
-                To buy the item use \`->store buy [item id]\``
+            value: `To view the item details use \`+store info [item id]\`
+                To buy the item use \`+store buy [item id]\``
         }]}
 
     const pages = ctx.pgn.getPages(items.map((x, i) => `${i + 1}. [${x.price} ${ctx.symbols.avoamusement}] \`${x.id}\` **${x.name}** (${x.desc})`), 5)
@@ -64,7 +64,7 @@ cmd(['store', 'buy'], ['shop', 'buy'], withItem(async (ctx, user, item, args) =>
             await user.save()
 
             return ctx.reply(user, `you purchased **${item.name} ${item.type}** for **${item.price}** ${ctx.symbols.avoamusement}
-                The item has been added to your inventory. See \`->inv info ${item.id}\` for details`, 'green')
+                The item has been added to your inventory. See \`+inv info ${item.id}\` for details`, 'green')
         }
     })
 }))

@@ -99,8 +99,8 @@ cmd('inv', withUserItems((ctx, user, items, args) => {
         embed: {
             author: { name: `${user.username}, your inventory` },
             fields: [
-                { name: `Usage`, value: `To view the item details use \`->item info [item id]\`
-                    To use the item \`->inv use [item id]\`` },
+                { name: `Usage`, value: `To view the item details use \`+item info [item id]\`
+                    To use the item \`+inv use [item id]\`` },
                 { name: `List (${items.length} results)`, value: '' }
             ],
             color: colors.blue,
@@ -210,14 +210,14 @@ cmd('daily', async (ctx, user) => {
 
         if(promo || boosts.length > 0) {
             fields.push({name: `Current events and boosts`,
-                value: `${promo? `[${msToTime(promo.expires - now, {compact: true})}] **${promo.name}** event (\`->claim promo\`)` : ''}
+                value: `${promo? `[${msToTime(promo.expires - now, {compact: true})}] **${promo.name}** event (\`+claim promo\`)` : ''}
                 ${boosts.map(x => 
-                `[${msToTime(x.expires - now, {compact: true})}] **${x.rate * 100}%** drop rate for **${x.name}** when you run \`->claim ${x.id}\``).join('\n')}`
+                `[${msToTime(x.expires - now, {compact: true})}] **${x.rate * 100}%** drop rate for **${x.name}** when you run \`+claim ${x.id}\``).join('\n')}`
             })
         }
 
         fields.push({name: `Get rewarded`,
-            value: 'Don\'t forget to vote for the bot every day and get in-game rewards. Check `->vote` for more information.'
+            value: 'Don\'t forget to vote for the bot every day and get in-game rewards. Check `+vote` for more information.'
         })
 
         ctx.mixpanel.track(
@@ -393,7 +393,7 @@ cmd('has', async (ctx, user, ...args) => {
         return ctx.qhelp(ctx, user, 'has')
 
     if(user.discord_id == newArgs.ids[0])
-        return ctx.reply(user, 'you can use ->cards to see your own cards', 'red')
+        return ctx.reply(user, 'you can use +cards to see your own cards', 'red')
 
     const otherUser = await fetchOnly(newArgs.ids[0])
     if(!otherUser)

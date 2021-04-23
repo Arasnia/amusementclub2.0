@@ -29,8 +29,8 @@ cmd('help', async (ctx, user, ...args) => {
     } else {
         try {
             const ch = await ctx.bot.getDMChannel(user.discord_id)
-            const curpgn = getHelpEmbed(ctx, help, `->`)
-            curpgn.embed.description = `> NOTE: This help message has standard prefix \`->\` which can be different in guilds (servers).\n
+            const curpgn = getHelpEmbed(ctx, help, `+`)
+            curpgn.embed.description = `> NOTE: This help message has standard prefix \`+\` which can be different in guilds (servers).\n
                 ${curpgn.embed.description}`
             await ctx.pgn.addPagination(user.discord_id, ch.id, curpgn)
 
@@ -49,7 +49,7 @@ cmd('help', async (ctx, user, ...args) => {
 
 cmd('rules', async (ctx, user) => {
     const help = ctx.help.find(x => x.type.includes('rules'))
-    return ctx.pgn.addPagination(user.discord_id, ctx.msg.channel.id, getHelpEmbed(ctx, help, `->`))
+    return ctx.pgn.addPagination(user.discord_id, ctx.msg.channel.id, getHelpEmbed(ctx, help, `+`))
 }).access('dm')
 
 cmd('baka', async (ctx, user, ...args) => {
@@ -74,7 +74,7 @@ cmd('pat', async (ctx, user, ...args) => {
 cmd('invite', async (ctx, user) => {
     const embed = { 
         title: `Invite amusement Club`,
-        description: `Please, read terms and conditions of using bot on your server by typing \`->help invite\` 
+        description: `Please, read terms and conditions of using bot on your server by typing \`+help invite\` 
             After that [click here](${ctx.invite}) to invite the bot.`,
         color: colors.green
     }
@@ -87,15 +87,15 @@ const getHelpEmbed = (ctx, o, prefix) => {
     const footerText = `amusement Club Alexandrite | xQAxThF | v${pjson.version} | by NoxCaos#4905`
     const embed = {
         title: o.title, 
-        description: o.description.replace(/->/g, prefix), fields: [],
+        description: o.description.replace(/+/g, prefix), fields: [],
         footer: { text: footerText },
         color: colors['green']
     }
 
     const pages = arrayChunks(o.fields.map((x) => ({ 
-        name: x.title.replace(/->/g, prefix), 
+        name: x.title.replace(/+/g, prefix), 
         inline: x.inline, 
-        value: x.description.replace(/->/g, prefix)
+        value: x.description.replace(/+/g, prefix)
     })), 6)
 
     return {

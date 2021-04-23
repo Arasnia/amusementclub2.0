@@ -97,7 +97,7 @@ module.exports.create = async ({
             author: { name: `Possible options:` },
             fields: help.fields.slice(0, 5).map(x => ({ name: x.title, value: x.description })),
             color: colors.blue,
-            footer: { text: `For full information type ->help ${cat} -here` }
+            footer: { text: `For full information type +help ${cat} -here` }
         }, user.discord_id)
     }
 

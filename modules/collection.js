@@ -25,7 +25,7 @@ const completed = async (ctx, user, card) => {
 
     const message = "You just completed the _"+ card.col +"_ collection!\n"+
         "You now have the option to reset this collection in exchange for a clout star. One copy of each card will be consumed if you do. To proceed, type:\n"+
-        "`->col reset "+ card.col +"`"
+        "`+col reset "+ card.col +"`"
 
     let userCards = user.cards.filter(x => x.id < ctx.cards.length).map(x => Object.assign({}, ctx.cards[x.id], x)).filter(x => x.col === card.col && x.level < 6)
 

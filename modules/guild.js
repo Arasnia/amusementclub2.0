@@ -36,7 +36,7 @@ const fetchOrCreate = async (ctx, user, discord_guild) => {
 
         await guild.save()
         await ctx.reply(user, `new guild added. This channel was marked as bot and report channel.
-            Type \`->help guild -here\` to see more about guild setup`)
+            Type \`+help guild -here\` to see more about guild setup`)
     }
 
     if(!fromcache)
@@ -73,7 +73,7 @@ const addGuildXP = (ctx, user, xp) => {
         if(user.xp > 10) {
             const warning = `\nPlease be aware that your claims are **${Math.round(ctx.guild.tax * 100)}%** more expensive here`
             ctx.reply(user, `welcome to **${ctx.discord_guild.name}!** ${ctx.guild.tax > 0? warning : ''}
-                For more information run \`->guild info\``)
+                For more information run \`+guild info\``)
         }
     }
 
@@ -149,7 +149,7 @@ const bill_guilds = async (ctx, now) => {
     if(ratio < 1) {
         guild.lockactive = false
         report.push(`> Negative ratio resulted all buildings taking damage. The building will stop functioning if health goes lower than 50%.
-            Use \`->guild status\` to check building health\n`)
+            Use \`+guild status\` to check building health\n`)
 
         if(guild.lock)
             report.push(`> Lock has been disabled until next check`)

@@ -42,7 +42,7 @@ cmd(['hero'], withUserEffects(async (ctx, user, effects, ...args) => {
     await user.save()
     effects = effects.filter(x => !x.expires || x.expires > now)
     if(!user.hero)
-        return ctx.reply(user, `you don't have a hero yet. To get one use \`->hero get [hero name]\``, 'red')
+        return ctx.reply(user, `you don't have a hero yet. To get one use \`+hero get [hero name]\``, 'red')
 
     const embed = await getInfo(ctx, user, user.hero)
     embed.fields = [
@@ -149,7 +149,7 @@ cmd(['effect', 'info'], ['hero', 'effect', 'info'], (ctx, user, ...args) => {
 cmd(['effects'], ['hero', 'effects'], withUserEffects(async (ctx, user, effects, ...args) => {
 
     if(!effects.some(x => !x.passive))
-        return ctx.reply(user, `you don't have any usable effects. To view passives use \`->hero slots\``, 'red')
+        return ctx.reply(user, `you don't have any usable effects. To view passives use \`+hero slots\``, 'red')
 
     const pages = ctx.pgn.getPages(effects.filter(x => x.uses)
         .sort((a, b) => a.cooldownends - b.cooldownends)
@@ -164,8 +164,8 @@ cmd(['effects'], ['hero', 'effects'], withUserEffects(async (ctx, user, effects,
         switchPage: (data) => data.embed.fields[0] = { name: `Usable Effect Cards`, value: data.pages[data.pagenum] },
         embed: {
             author: { name: `${user.username}, your Effect Cards` },
-            description: `To use an effect: \`->hero use [effect id]\`
-                To view your passives: \`->hero slots\``,
+            description: `To use an effect: \`+hero use [effect id]\`
+                To view your passives: \`+hero slots\``,
             fields: [],
             color: colors.blue
         }
@@ -189,7 +189,7 @@ cmd(['slots'], ['hero', 'slots'], withUserEffects(async (ctx, user, effects, ...
         switchPage: (data) => data.embed.fields[2].value = data.pages[data.pagenum],
         embed: {
             description: `**${hero.name}** card slots:
-                (\`->hero equip [slot] [passive]\` to equip passive Effect Card)`,
+                (\`+hero equip [slot] [passive]\` to equip passive Effect Card)`,
             color: colors.blue,
             fields: [
                 { name: `Slot 1`, value: `[${user.herocooldown[0] > now? msToTime(user.herocooldown[0] - now, {compact:true}) : '--' }] ${
@@ -230,7 +230,7 @@ cmd(['use'], ['hero', 'use'], ['effect', 'use'], withUserEffects(async (ctx, use
     const dailystatname = `effect_${effect.id}`
     if(user.dailystats[dailystatname])
         return ctx.reply(user, `effects can be used only once per day. 
-            Try using it once again after you run \`->daily\``, 'red')
+            Try using it once again after you run \`+daily\``, 'red')
 
     const res = await effect.use(ctx, user, args.slice(1))
     if(!res.used)
@@ -326,7 +326,7 @@ cmd(['equip'], ['hero', 'equip'], withUserEffects(async (ctx, user, effects, ...
 }))
 
 cmd(['hero', 'submit'], async (ctx, user, arg1) => {
-    if(XPtoLEVEL(user.xp) < 25)
+    if(XPtoLEVEL(user.xp) < 3)
         return ctx.reply(user, `you have to be level **25** or higher to submit a hero`, 'red')
 
     if(!arg1)
@@ -343,7 +343,7 @@ cmd(['hero', 'submit'], async (ctx, user, arg1) => {
 
     const dbchar = await get_hero(ctx, charID)
     if(dbchar && dbchar.active)
-        return ctx.reply(user, `hero **${dbchar.name}** already exists. You can pick them from \`->hero list\``)
+        return ctx.reply(user, `hero **${dbchar.name}** already exists. You can pick them from \`+hero list\``)
 
     if(dbchar && !dbchar.active)
         return ctx.reply(user, `hero **${dbchar.name}** is already pending for approval`, 'yellow')

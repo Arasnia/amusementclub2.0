@@ -91,7 +91,7 @@
         "price": 3000,
         "type": "blueprint",
         "desc": "forge and draw cards",
-        "fulldesc": "When built users will be able to forge cards together and use vials to draw new cards. Details: `->help forge` and `->help draw`",
+        "fulldesc": "When built users will be able to forge cards together and use vials to draw new cards. Details: `+help forge` and `+help draw`",
         "levels": [
             {
                 "price": 1000,
@@ -132,7 +132,7 @@
                 "price": 16000,
                 "level": 30,
                 "maintenance": 300,
-                "desc": "Adds user level amount of {currency} to guild balance when user runs `->daily`"
+                "desc": "Adds user level amount of {currency} to guild balance when user runs `+daily`"
             }
         ]
     }, {
