@@ -226,7 +226,7 @@
             },
             {
                 "title": "+col reset [collection name]",
-                "description": "Reset a collection for clout stars and 5 stars if available for that collection."
+                "description": "Reset a collection for clout stars and 6 stars if available for that collection."
             }
         ]
     },
