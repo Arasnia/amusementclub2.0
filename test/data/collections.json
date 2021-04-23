@@ -1,6 +1,7 @@
 [
 {"id":"animalcrossing","name":"Animal Crossing","origin":null,"aliases":["animalcrossing"],"promo":false,"compressed":true}, 
 {"id":"foodfantasy","name":"Food Fantasy","origin":null,"aliases":["foodfantasy"],"promo":false,"compressed":true},
+{"id":"leagueoflegends","name":"League of Legends","origin":null,"aliases":["leagueoflegends"],"promo":false,"compressed":true},
 {"id":"lovelive","name":"Love Live School Idol Project","origin":null,"aliases":["lovelive"],"promo":false,"compressed":true}
 
 ]

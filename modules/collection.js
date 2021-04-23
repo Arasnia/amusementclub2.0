@@ -64,11 +64,11 @@ const reset = async (ctx, user, col) => {
     user.markModified('completedcols')
 
     user.cards.map(x => { 
-        if(ctx.cards[x.id] && ctx.cards[x.id].col === col.id && ctx.cards[x.id].level < 5) 
+        if(ctx.cards[x.id] && ctx.cards[x.id].col === col.id && ctx.cards[x.id].level < 4) 
             x.amount--
     })
 
-    user.xp += ctx.cards.filter(x => x.col === col.id && x.level != 5).length
+    user.xp += ctx.cards.filter(x => x.col === col.id && x.level != 3).length
     user.cards = user.cards.filter(x => x.amount > 0)
     user.markModified('cards')
 
