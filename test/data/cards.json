@@ -103,7 +103,25 @@
     {"name":"Nico_Yazawa_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
     {"name":"Nozomi_Tojo_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
     {"name":"Rin_Hoshisora_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
-    {"name":"Umi_Sonoda_1_2_Jump","level":1,"animated":false,"col":"lovelive"}
+    {"name":"Umi_Sonoda_1_2_Jump","level":1,"animated":false,"col":"lovelive"},
 
+    {"name":"Eli_Ayase_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Hanayo_Koizumi_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Honoka_Kousaka_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Kotori_Minami_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Maki_Nishikino_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Nico_Yazawa_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Nozomi_Tojo_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Rin_Hoshisora_Uniform","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Umi_Sonoda_Uniform","level":1,"animated":false,"col":"lovelive"},
 
+    {"name":"Eli_Ayase_Uniform_02","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Hanayo_Koizumi_Uniform_02","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Honoka_Kousaka_Uniform_02","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Kotori_Minami_Uniform_02","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Maki_Nishikino_Uniform_02","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Nico_Yazawa_Uniform_02","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Nozomi_Tojo_Uniform_02","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Rin_Hoshisora_Uniform_02","level":1,"animated":false,"col":"lovelive"},
+    {"name":"Umi_Sonoda_Uniform_02","level":1,"animated":false,"col":"lovelive"}
 ]
