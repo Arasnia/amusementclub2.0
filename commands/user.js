@@ -307,9 +307,9 @@ cmd('profile', async (ctx, user, ...args) => {
     const botuser = ctx.bot.users.find(x => x.id === user.discord_id)
     return ctx.send(ctx.msg.channel.id, {
         description: resp.join('\n'),
-        color: colors['yellow'],
+        color: colors['blue'],
         author: {
-            name: `${user.username} (${user.discord_id})`
+            name: `${user.username}`
         },
         thumbnail: {
             url: botuser? botuser.avatarURL : ''
