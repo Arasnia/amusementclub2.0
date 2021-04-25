@@ -21,13 +21,13 @@ const bestColMatchMulti = (ctx, name) => {
     userCards is mainly a copy/paste of mapUserCards from module Cards, but it would break on require so I stole it since it's only 1 line
  */
 const completed = async (ctx, user, card) => {
-    const colCards = ctx.cards.filter(x => x.col === card.col && x.level < 6)
+    const colCards = ctx.cards.filter(x => x.col === card.col && x.level < 5)
 
     const message = "You just completed the _"+ card.col +"_ collection!\n"+
         "You now have the option to reset this collection in exchange for a clout star. One copy of each card will be consumed if you do. To proceed, type:\n"+
         "`+col reset "+ card.col +"`"
 
-    let userCards = user.cards.filter(x => x.id < ctx.cards.length).map(x => Object.assign({}, ctx.cards[x.id], x)).filter(x => x.col === card.col && x.level < 6)
+    let userCards = user.cards.filter(x => x.id < ctx.cards.length).map(x => Object.assign({}, ctx.cards[x.id], x)).filter(x => x.col === card.col && x.level < 5)
 
     if(userCards.length < colCards.length) {
         return false

@@ -65,7 +65,7 @@ cmd('claim', 'cl', async (ctx, user, ...args) => {
         any = true
     }
 
-    const amount = args.filter(x => x.length < 3 && !isNaN(x)).map(x => Math.abs(parseInt(x)))[0] || 1
+    const amount = args.filter(x => x.length < 4 && !isNaN(x)).map(x => Math.abs(parseInt(x)))[0] || 1
     const price = promo? promoClaimCost(user, amount) : claimCost(user, ctx.guild.tax, amount)
     const normalprice = promo? price : claimCost(user, 0, amount)
     const gbank = getBuilding(ctx, 'gbank')
