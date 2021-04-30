@@ -1361,6 +1361,7 @@
 
     {"name":"Absalom","level":1,"animated":false,"col":"onepiece"},
     {"name":"Arlong","level":1,"animated":false,"col":"onepiece"},
+
     {"name":"Banana_Gator","level":1,"animated":false,"col":"onepiece"},
     {"name":"Basil_Hawkins","level":1,"animated":false,"col":"onepiece"},
     {"name":"Bepo","level":1,"animated":false,"col":"onepiece"},
@@ -1369,6 +1370,7 @@
     {"name":"Brontosaurus","level":1,"animated":false,"col":"onepiece"},
     {"name":"Buggy","level":1,"animated":false,"col":"onepiece"},
     {"name":"Butchie","level":1,"animated":false,"col":"onepiece"},
+
     {"name":"Cabaji_the_Acrobat","level":1,"animated":false,"col":"onepiece"},
     {"name":"Capone_Bege","level":1,"animated":false,"col":"onepiece"},
     {"name":"Captain_Kuro","level":1,"animated":false,"col":"onepiece"},
@@ -1378,20 +1380,272 @@
     {"name":"Choo","level":1,"animated":false,"col":"onepiece"},
     {"name":"Cindry","level":1,"animated":false,"col":"onepiece"},
     {"name":"Coby","level":1,"animated":false,"col":"onepiece"},
+
     {"name":"Dalton","level":1,"animated":false,"col":"onepiece"},
     {"name":"Dog_Penguin","level":1,"animated":false,"col":"onepiece"},
     {"name":"Don_Krieg","level":1,"animated":false,"col":"onepiece"},
     {"name":"Dorry","level":1,"animated":false,"col":"onepiece"},
     {"name":"Dr._Kureha","level":1,"animated":false,"col":"onepiece"},
+
     {"name":"Edward_Newgate","level":1,"animated":false,"col":"onepiece"},
     {"name":"Emporio_Ivankov","level":1,"animated":false,"col":"onepiece"},
+
     {"name":"Franky","level":1,"animated":false,"col":"onepiece"},
+
     {"name":"Gaimon","level":1,"animated":false,"col":"onepiece"},
     {"name":"Gin","level":1,"animated":false,"col":"onepiece"},
+
     {"name":"Hatchan","level":1,"animated":false,"col":"onepiece"},
     {"name":"Helmeppo","level":1,"animated":false,"col":"onepiece"},
     {"name":"Hina","level":1,"animated":false,"col":"onepiece"},
     {"name":"Hina_Graceful_Honor_Student","level":1,"animated":false,"col":"onepiece"},
-    {"name":"Hogback","level":1,"animated":false,"col":"onepiece"}
+    {"name":"Hogback","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Iron_Fist_Fullbody","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Iron_Mace_Alvida","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Izo","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Jewelry_Bonney","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Johnny","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Jozu","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Kaku","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Kalifa","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Killer","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Kiwi","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Kraken_Surume","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Kumacy","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Kung_Fu_Dugong","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Kuromarimo","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Kuroobi","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Laboon","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Lapin","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Lulu","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Marco","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Miss_All_Sunday_Baraque_Works_VP","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Miss_Doublefinger","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Miss_Goldenweek","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Miss_Merry_Christmas","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Miss_Monday","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Miss_Valentine","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Miss_Wednesday","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Mohji_and_Richie","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Momonga","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Momoo","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Monkey_D.Luffy","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Monkey_D.Luffy_Kid","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Monkey_D.Garp","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Morgan","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Mozu","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Mr.0_Baroque_Works_CEO","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Mr.1","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Mr.13_and_Ms.Friday_The_Unluckies","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Mr.2_Bon_Clay","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Mr.3","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Mr.4","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Mr.5_Nez-Palm_Cannon","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Mr.8","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Mr.9","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Nami","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Nezumi","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"One-Two_Django","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Onigumo","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Patty","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Paulie","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Pearl","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Perona","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Portgas_D.Ace","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Portgas_D.Ace_Mt.Corvos_Brothers_3","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Rex","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Rob_Lucci","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Roronoa_Zoro","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Sandora_Dragon","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Sanji","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Scatchmen_Apoo","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Sea_Cat","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Shanks","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Shanks_Pirate_Apprentice","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Siam","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Silvers_Rayleigh","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Smoker","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Tashigi","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Tony_Tony_Chopper","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Tony_Tony_Chopper_Davy_Back_Fight_Mask","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Trafalgar_Law","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Triceratops","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Tsuru","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Urouge","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Usopp","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Vista","level":1,"animated":false,"col":"onepiece"},
+    {"name":"Vivi_Kid","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Wapol","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"X_Drake","level":1,"animated":false,"col":"onepiece"},
+
+    {"name":"Yosaku","level":1,"animated":false,"col":"onepiece"},
+
+
+
+
+    {"name":"Absalom_of_the_Graveyard","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Basil_Hawkins_the_Magician","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Beautiful_Secretary_Kalifa","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Bepo_The_Martial_Artist","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Big_Eater_Jewelry_Bonney","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Black_Cage_Hina","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Blamenco_the_Mallet","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Buggy_the_Clown","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Cabin_Boy_Coby","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Cabin_Boy_Helmeppo","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Capone_Gang_Bege","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Captain_Kid","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Chessmarimo","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Choo_Sun_Pirates","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Chopper_Man","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Dalton_Bison","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Dancing_Django","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Dark_King_Rayleigh","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Diamond_Jozu","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Dismantler_Franky","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Doctor_Hogback","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Don_Krieg_Poison_Gas_Bomb_MH5","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Emporio_Ivankov_Queen_of_Kamabakka","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Enraged_Arlong_Shark_On_Tooth","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Escapee_Morgan","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Fire_Pearl","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Flintlock_Pistols_Izo","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Flower_Sword_Vista","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Gangster_Carne","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Gangster_Patty","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Garp_the_Fist","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Ghost_Princess_Perona","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Gin_the_Man-Demon","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Great_Advisor_Tsuru","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Hina_Polite_Honor_Student","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Iron_Mace_Alvida_Smooth-Smooth_Fruit","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Kaku_Carpentry_Specialist","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Kranken_Monster_of_the_North","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Kung_Fu_Dugong_Faithful_Apprentice","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Kuro_of_a_Hundred_Plans","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Kuroobi_Sun_Pirates","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Laboon_Ruffys_Drawing","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Lapin_Adult","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Mad_Monk_Urouge","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Marco_The_Phoenix","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Massacre_Soldier_Killer","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Miss_Doublefinger_Human_Spike","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Miss_Goldenweek_Colors_Trap_Calming_Green","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Miss_Merry_Christmas_Human_Mole","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Miss_Monday_Superhuman_Brass_Knuckles","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Miss_Valentine_10000_Kilo_Guillotine","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Monkey_D.Luffy_Gum-Gum_Bazooka","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Monkey_D.Luffy_Gum-Gum_Balloon","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Monkey_D.Garp","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Mr.1_Human_Sword","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Mr.2_Bon_Clay_Bombardier_Arabesque","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Mr.3_Extra_Special_Candelabra","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Mr.4_and_Lassoo_the_Dog-Gun","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Mr.5_Breeze_Breath_Bomb","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Mr.8_Igarappapa","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Mr.9_Hot_Blooded_Bat","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Mr.Prince_Sanji_Mutton_Shot","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Nami_Fine_Tempo","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Nami_Tornado_Tempo","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Nefeltari_Vivi","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Nefeltari_Vivi_Sand-Sand_Band_Sub-Leader","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Nico_Robin","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Paulie_Dock_One_Foreman","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Pirate_Zeff","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Portgas_D.Ace_Cup_of_Sworn_Brotherhood","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Portgas_D.Ace_Flame_Mirror","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Red_Haired_Shanks","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Red_Flag_X_Drake","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Roar_of_the_Sea_Scratchmen_Apoo","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Rob_Lucci_Treenail_Specialist","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Roronoa_Zoro_Streaming_Wolf_Swords","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Roronoa_Zoro_Three_Thousand_Worlds","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Sanji_Plastic_Surgery_Shot","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Shanks_Roger_Pirates","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Sir_Crocodile","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Six-Sword_Hachi","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Tashigi_Navy_HQ_Ensign","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Tony_Tony_Chopper_Arm_Point","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Tony_Tony_Chopper_Heavy_Point","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Trafalgar_Law","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Usopp_Tabasco_Star","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Usopp_Usopp_Hammer","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Victoria_Cindry","level":2,"animated":false,"col":"onepiece"},
+
+    {"name":"Wapol_House","level":2,"animated":false,"col":"onepiece"},
+    {"name":"Whitebeard","level":2,"animated":false,"col":"onepiece"},
+
+
+
+    {"name":"Arlong_the_Pirate","level":3,"animated":false,"col":"onepiece"},
+
+    {"name":"Buggy_Pirate_Apprentice","level":3,"animated":false,"col":"onepiece"},
+
+    {"name":"Chef_Sanji_Hot_Rock_Stew","level":3,"animated":false,"col":"onepiece"},
+
+    {"name":"Double_Crosser_Django","level":3,"animated":false,"col":"onepiece"},
+
+    {"name":"Hatchan_Takoyaki_Shop_Manager","level":3,"animated":false,"col":"onepiece"},
+
+    {"name":"Monkey_D.Luffy_Gear_2","level":3,"animated":false,"col":"onepiece"},
+    {"name":"Monkey_D.Luffy_Gear_3","level":3,"animated":false,"col":"onepiece"},    
+    {"name":"Mr.Prince_Veau_Shot","level":3,"animated":false,"col":"onepiece"},
+
+    {"name":"Nami_Happiness_Punch","level":3,"animated":false,"col":"onepiece"},
+    {"name":"Nami_Mirage_Tempo","level":3,"animated":false,"col":"onepiece"},
+    {"name":"Nefeltari_Vivi_Love","level":3,"animated":false,"col":"onepiece"},
+    {"name":"Nefeltari_Vivi_Princess_of_Alabasta","level":3,"animated":false,"col":"onepiece"},
+
+    {"name":"Portgas_D.Ace_Black_Clad_Frame_Fist","level":3,"animated":false,"col":"onepiece"},
+    {"name":"Princess_Vivi","level":3,"animated":false,"col":"onepiece"},
+
+    {"name":"Red-Leg_Zeff_Cook_Pirates_Captain","level":3,"animated":false,"col":"onepiece"},
+    {"name":"Roronoa_Zoro_Lions_Song","level":3,"animated":false,"col":"onepiece"},
+    {"name":"Roronoa_Zoro_Pound_Phoenix","level":3,"animated":false,"col":"onepiece"},
+
+    {"name":"Shanks_Black_Clad_Redhead","level":3,"animated":false,"col":"onepiece"},
+    {"name":"Smoker_Navy_Grand_Line_5th_Branch","level":3,"animated":false,"col":"onepiece"},
+
+    {"name":"Tashigi_Navy_Grand_Line_5th_Branch","level":3,"animated":false,"col":"onepiece"},
+    {"name":"Tony_Tony_Chopper_Brain_Point","level":3,"animated":false,"col":"onepiece"},
+    {"name":"Tony_Tony_Chopper_Pre-Rampagne","level":3,"animated":false,"col":"onepiece"},
+    {"name":"Training_Coby","level":3,"animated":false,"col":"onepiece"},
+    {"name":"Training_Helmeppo","level":3,"animated":false,"col":"onepiece"},
+
+    {"name":"Usopp_Golden_Pound","level":3,"animated":false,"col":"onepiece"},
+    {"name":"Usopp_Impact","level":3,"animated":false,"col":"onepiece"}
 
 ]
