@@ -208,7 +208,7 @@ pcmd(['admin', 'auditor'], ['audit', 'trans'], async (ctx, user, ...arg) => {
 
     const resp = []
     resp.push(`Card: ${formatName(card)}`)
-    resp.push(`Price: **${trans.price}** ${ctx.symbols.avoamusement}`)
+    resp.push(`Price: **${trans.price}** ${ctx.symbols.avocados}`)
     resp.push(`From: **${trans.from}** \`${trans.from_id}\``)
     resp.push(`To: **${trans.to}** \`${trans.to_id}\``)
 
@@ -267,9 +267,9 @@ pcmd(['admin', 'auditor'], ['audit', 'auc'], ['audit', 'auction'], async (ctx, u
 
     const resp = []
     resp.push(`Seller: **${author.username}** \`${author.discord_id}\``)
-    resp.push(`Price: **${auc.price}** ${ctx.symbols.avoamusement}`)
+    resp.push(`Price: **${auc.price}** ${ctx.symbols.avocados}`)
     resp.push(`Card: ${formatName(card)}`)
-    resp.push(`Card value: **${await evalCard(ctx, card)}** ${ctx.symbols.avoamusement}`)
+    resp.push(`Card value: **${await evalCard(ctx, card)}** ${ctx.symbols.avocados}`)
 
     if(auc.finished)
         resp.push(`**This auction has finished! Finished at ${dateFormat(auc.expires, "yyyy-mm-dd HH:MM:ss")}**`)
@@ -326,7 +326,7 @@ pcmd(['admin', 'auditor'], ['audit', 'find', 'user'], async (ctx, user, ...args)
     let embed = {
         author: {name: `${user.username} here is the info for ${findUser.username}`},
         description: `**${findUser.username}** \`${findUser.discord_id}\`
-                      avoamusement: **${findUser.exp}${ctx.symbols.avoamusement}** 
+                      avocados: **${findUser.exp}${ctx.symbols.avocados}** 
                       Vials: **${findUser.vials}${ctx.symbols.vial}**
                       Promo Currency: **${findUser.promoexp}**
                       Join Date: **${findUser.joined}**

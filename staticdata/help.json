@@ -2,7 +2,7 @@
     {
         "type": ["general"],
         "title": "\u2B50 amusement Club \u2B50 RPG Gacha",
-        "description": "amusement Club is a global gacha game for Discord with thousands of cute and fancy cards made by the bot's community. You can get started on any server by typing `+claim` in a bot channel. Each claim will cost you more `🧁` avoamusement (in-game currency) `+daily` will reset your claim cost and give you extra avoamusement.\n\nIf you need help with setting up bot channel or setting custom prefix on your server, use `+help server`",
+        "description": "amusement Club is a global gacha game for Discord with thousands of cute and fancy cards made by the bot's community. You can get started on any server by typing `+claim` in a bot channel. Each claim will cost you more `🧁` avocados (in-game currency) `+daily` will reset your claim cost and give you extra avocados.\n\nIf you need help with setting up bot channel or setting custom prefix on your server, use `+help server`",
         "fields": [
             {
                 "title": "User",
@@ -36,7 +36,7 @@
     {
         "type": ["ach", "achievement", "achievements"],
         "title": "About achievements",
-        "description": "Achievements are fun little extras you can recieve by playing the bot normally. They can reward you with personal xp, avoamusement, or vials.",
+        "description": "Achievements are fun little extras you can recieve by playing the bot normally. They can reward you with personal xp, avocados, or vials.",
         "fields": [
             {
                 "title": "+achievements",
@@ -68,7 +68,7 @@
             },
             {
                 "title": "+auc bid [id] [amount]", 
-                "description": " Bid on Auctions. For example `+auc bid ktgs 500` will bid 500 `🧁` on auction with ID `ktgs`. You can not bid on your own auction. \n**IMPORTANT**: Place your bids carefully! Your avoamusement will be taken automatically when you place a bid. It will be returned to you when you have been outbid.\n You have 5 attempts to outbid someone on an auction before you are locked out from bidding on that specific auction again. If you outbid them, this counter is reset. Any extra avoamusement bid over displayed price will be returned to you upon winning an auction"
+                "description": " Bid on Auctions. For example `+auc bid ktgs 500` will bid 500 `🧁` on auction with ID `ktgs`. You can not bid on your own auction. \n**IMPORTANT**: Place your bids carefully! Your avocados will be taken automatically when you place a bid. It will be returned to you when you have been outbid.\n You have 5 attempts to outbid someone on an auction before you are locked out from bidding on that specific auction again. If you outbid them, this counter is reset. Any extra avocados bid over displayed price will be returned to you upon winning an auction"
             },
             {
                 "title": "+auc info [id]",
@@ -93,13 +93,13 @@
         ]
     },
     {
-        "type": ["bal", "balance", "economy", "currency", "avoamusement", "vials", "vial", "orange"],
+        "type": ["bal", "balance", "economy", "currency", "avocados", "vials", "vial", "orange"],
         "title": "About currencies",
-        "description": "This command will show your amount of `🧁` avoamusement, and `🍷`Vials.\n**avoamusement** are the main currency in game that are used for card `+claim`, trading, forging, etc. You can get them by completing `+quests` and claiming `+daily`\n`🍷` Vials are the secondary currency used for drawing new cards in servers with upgraded Smith Hubs. You can get them via daily quests or liquifying cards.",
+        "description": "This command will show your amount of `🧁` avocados, and `🍷`Vials.\n**avocados** are the main currency in game that are used for card `+claim`, trading, forging, etc. You can get them by completing `+quests` and claiming `+daily`\n`🍷` Vials are the secondary currency used for drawing new cards in servers with upgraded Smith Hubs. You can get them via daily quests or liquifying cards.",
         "fields": [
             {
                 "title": "Useful to know",
-                "description": "You can also spend your avoamusement by accepting trade requests from other users (`+help sell`) and selling cards on auction (`+help auc`)"
+                "description": "You can also spend your avocados by accepting trade requests from other users (`+help sell`) and selling cards on auction (`+help auc`)"
             },
             {
                 "title": "Promo Currency",
@@ -179,7 +179,7 @@
     {
         "type": ["cl", "claim"],
         "title": "About card claiming",
-        "description": "You can claim cards as long as you have enough `🧁` avoamusement. Claim costs start at 50 avoamusement and increase by 50 each claim. The claim cost goes back to minimum after running `+daily`. Claim cost can be affected by Guilds in the form of taxes. Prices for claims will be adjusted by specific guild tax amounts",
+        "description": "You can claim cards as long as you have enough `🧁` avocados. Claim costs start at 50 avocados and increase by 50 each claim. The claim cost goes back to minimum after running `+daily`. Claim cost can be affected by Guilds in the form of taxes. Prices for claims will be adjusted by specific guild tax amounts",
         "fields": [
             {
                 "title": "Locked claims",
@@ -252,7 +252,7 @@
     {
         "type": ["daily"],
         "title": "About daily bonus",
-        "description": "You can get free **300`🧁`** avoamusement every 20 hours(**500`🧁`** in servers with Guild Bank level 1).",
+        "description": "You can get free **300`🧁`** avocados every 20 hours(**500`🧁`** in servers with Guild Bank level 1).",
         "fields": [
             {
                 "title": "Useful to know",
@@ -415,7 +415,7 @@
             },
             {
                 "title": "+guild donate [amount]",
-                "description": "Allows you to donate your own `🧁` avoamusement to the guild's balance (Requires a castle be built first)"
+                "description": "Allows you to donate your own `🧁` avocados to the guild's balance (Requires a castle be built first)"
             },
             {
                 "title": "+guild downgrade [building ID]",
@@ -443,7 +443,7 @@
             },
             {
                 "title": "+guild lock [collection]",
-                "description": "Set current guild lock to specified collection, requires 100,000 `🧁` avoamusement to lock, 5,000 `🧁` avoamusement/day to upkeep. Can only be set once every 7 days. `+guild unlock` removes the lock (owner/manager only)"
+                "description": "Set current guild lock to specified collection, requires 100,000 `🧁` avocados to lock, 5,000 `🧁` avocados/day to upkeep. Can only be set once every 7 days. `+guild unlock` removes the lock (owner/manager only)"
             },
             {
                 "title": "+guild set buildrank",
@@ -530,7 +530,7 @@
         "fields": [
             {
                 "title": "Setting up your server",
-                "description": "The channel where you run your first command becomes bot channel.\n`+guild info` will show you the list of bot channels. You can set a bot channel by typing `+guild set bot` in that channel. `+guild unset bot` will remove bot perms from current channel.\nDon't remove 'send messages' permission from channels where you want `+summon` to work.\nIf you want to exclude amusement Club from other bot channel, make sure you remove **both** 'read' and 'send' permissions. If you leave 'read messages' permission on, bot will still read commands, but won't be able to respond which can lead to confusion and loss of avoamusement"
+                "description": "The channel where you run your first command becomes bot channel.\n`+guild info` will show you the list of bot channels. You can set a bot channel by typing `+guild set bot` in that channel. `+guild unset bot` will remove bot perms from current channel.\nDon't remove 'send messages' permission from channels where you want `+summon` to work.\nIf you want to exclude amusement Club from other bot channel, make sure you remove **both** 'read' and 'send' permissions. If you leave 'read messages' permission on, bot will still read commands, but won't be able to respond which can lead to confusion and loss of avocados"
             },
             {
                 "title": "Channel Privacy (2018-05-28)",
@@ -681,11 +681,11 @@
         "fields": [
             {
                 "title": "Direct Trading",
-                "description": "There are no commands to gift another player avoamusement nor cards. This is on purpose. Behavior that aims to bypass these restrictions is prohibited."
+                "description": "There are no commands to gift another player avocados nor cards. This is on purpose. Behavior that aims to bypass these restrictions is prohibited."
             },
             {
                 "title": "Auction Bidding",
-                "description": "Bidding on auctions for the express purpose of helping someone gain avoamusement is prohibited. This includes buying cards from someone on auction and re-selling it to them, bidding to drive the price higher for them, and more."
+                "description": "Bidding on auctions for the express purpose of helping someone gain avocados is prohibited. This includes buying cards from someone on auction and re-selling it to them, bidding to drive the price higher for them, and more."
             },
             {
                 "title": "Multiple Accounts",

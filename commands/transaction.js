@@ -150,7 +150,7 @@ cmd(['trans', 'info'], async (ctx, user, arg1) => {
 
     const resp = []
     resp.push(`Card: ${formatName(card)}`)
-    resp.push(`Price: **${trs.price}** ${ctx.symbols.avoamusement}`)
+    resp.push(`Price: **${trs.price}** ${ctx.symbols.avocados}`)
     resp.push(`From: **${trs.from}**`)
     resp.push(`To: **${trs.to}**`)
 

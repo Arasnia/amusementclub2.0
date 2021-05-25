@@ -80,7 +80,7 @@ pcmd(['admin', 'mod'], ['sudo', 'award'], ['sudo', 'add', 'balance'], async (ctx
 
         target.exp += amount
         await target.save()
-        rpl.push(`\`✅\` added '${amount}' ${ctx.symbols.avoamusement} to **${target.username}** (${target.discord_id})`)
+        rpl.push(`\`✅\` added '${amount}' ${ctx.symbols.avocados} to **${target.username}** (${target.discord_id})`)
     })
 
     return ctx.reply(user, rpl.join('\n'))

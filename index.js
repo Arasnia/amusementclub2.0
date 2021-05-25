@@ -102,7 +102,7 @@ module.exports.create = async ({
     }
 
     const symbols = {
-        avoamusement: '`🥑`',
+        avocados: '`🥑`',
         vial: '`🍷`',
         star: '★',
         auc_sbd: '🔹',

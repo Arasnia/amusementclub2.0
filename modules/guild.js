@@ -121,12 +121,12 @@ const bill_guilds = async (ctx, now) => {
     if(ratio == Infinity)
         ratio = 0
 
-    report.push(`Maintenance cost: **${total}** ${ctx.symbols.avoamusement}`)
+    report.push(`Maintenance cost: **${total}** ${ctx.symbols.avocados}`)
     if(guild.discount > 0) {
-        report.push(`Applied discount: **${guild.discount * 100}%** (${discount} ${ctx.symbols.avoamusement})`)
+        report.push(`Applied discount: **${guild.discount * 100}%** (${discount} ${ctx.symbols.avocados})`)
     }
 
-    report.push(`Remaining guild balance: **${guild.balance}** ${ctx.symbols.avoamusement}`)
+    report.push(`Remaining guild balance: **${guild.balance}** ${ctx.symbols.avocados}`)
 
     const past = asdate.subtract(new Date(), 7, 'days')
     const activeUsers = await User.countDocuments({ 
@@ -218,10 +218,10 @@ const getBuildingInfo = (ctx, user, args) => {
         description: item.fulldesc,
         fields: item.levels.map((x, i) => ({
             name: `Level ${i + 1}`, 
-            value: `Price: **${x.price}** ${ctx.symbols.avoamusement}
-                Maintenance: **${x.maintenance}** ${ctx.symbols.avoamusement}/day
+            value: `Price: **${x.price}** ${ctx.symbols.avocados}
+                Maintenance: **${x.maintenance}** ${ctx.symbols.avocados}/day
                 Required guild level: **${x.level}**
-                > ${x.desc.replace(/{currency}/gi, ctx.symbols.avoamusement)}`
+                > ${x.desc.replace(/{currency}/gi, ctx.symbols.avocados)}`
     }))}
 
     const heart = building.health < 50? '💔' : '❤️'

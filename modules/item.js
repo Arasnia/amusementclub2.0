@@ -168,10 +168,10 @@ const infos = {
         description: item.fulldesc,
         fields: item.levels.map((x, i) => ({
             name: `Level ${i + 1}`, 
-            value: `Price: **${x.price}** ${ctx.symbols.avoamusement}
-                Maintenance: **${x.maintenance}** ${ctx.symbols.avoamusement}/day
+            value: `Price: **${x.price}** ${ctx.symbols.avocados}
+                Maintenance: **${x.maintenance}** ${ctx.symbols.avocados}/day
                 Required guild level: **${x.level}**
-                > ${x.desc.replace(/{currency}/gi, ctx.symbols.avoamusement)}`
+                > ${x.desc.replace(/{currency}/gi, ctx.symbols.avocados)}`
         }))
     }),
 
@@ -223,7 +223,7 @@ const checks = {
             return `this guild already has **${item.name}**`
 
         if(user.exp < item.levels[0].price)
-            return `you need at least **${item.levels[0].price}** ${ctx.symbols.avoamusement} to build **${item.name} level 1**`
+            return `you need at least **${item.levels[0].price}** ${ctx.symbols.avocados} to build **${item.name} level 1**`
 
         if(XPtoLEVEL(guild.xp) < item.levels[0].level)
             return `this guild has to be at least level **${item.levels[0].level}** to have **${item.name} level 1**`

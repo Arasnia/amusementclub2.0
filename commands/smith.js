@@ -63,12 +63,12 @@ cmd(['forge'], withMultiQuery(async (ctx, user, cards, parsedargs) => {
     const vialres = Math.round((vialavg === Infinity? 0 : vialavg) * .5)
 
     if(user.exp < cost)
-        return ctx.reply(user, `you need at least **${cost}** ${ctx.symbols.avoamusement} to forge these cards`, 'red')
+        return ctx.reply(user, `you need at least **${cost}** ${ctx.symbols.avocados} to forge these cards`, 'red')
 
     if((card1.fav && card1.amount == 1) || (card2.fav && card2.amount == 1))
         return ctx.reply(user, `your query contains last copy of your favourite card(s). Please remove it from favourites and try again`, 'red')
 
-    const question = `Do you want to forge ${formatName(card1)}**(x${card1.amount})** and ${formatName(card2)}**(x${card2.amount})** using **${cost}** ${ctx.symbols.avoamusement}?
+    const question = `Do you want to forge ${formatName(card1)}**(x${card1.amount})** and ${formatName(card2)}**(x${card2.amount})** using **${cost}** ${ctx.symbols.avocados}?
         You will get **${vialres}** ${ctx.symbols.vial} and a **${card1.level} ${ctx.symbols.star} card**`
 
     return ctx.pgn.addConfirmation(user.discord_id, ctx.msg.channel.id, {

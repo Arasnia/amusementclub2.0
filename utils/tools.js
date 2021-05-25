@@ -7,7 +7,7 @@ const claimCost = (user, tax, amount, totalClaims) => {
     let claims = totalClaims || user.dailystats.claims || 0
     for (let i = 0; i < amount; i++) {
         claims++
-        total += claims * 50
+        total += claims * 70
     }
 
     return Math.round(total + total * tax)
@@ -18,7 +18,7 @@ const promoClaimCost = (user, amount, totalClaims) => {
     let claims = totalClaims || user.dailystats.promoclaims || 0
     for (let i = 0; i < amount; i++) {
         claims++
-        total += claims * 50
+        total += claims * 70
     }
 
     return Math.round(total)

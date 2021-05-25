@@ -35,7 +35,7 @@ cmd('store', 'shop', async (ctx, user, cat) => {
                 To buy the item use \`+store buy [item id]\``
         }]}
 
-    const pages = ctx.pgn.getPages(items.map((x, i) => `${i + 1}. [${x.price} ${ctx.symbols.avoamusement}] \`${x.id}\` **${x.name}** (${x.desc})`), 5)
+    const pages = ctx.pgn.getPages(items.map((x, i) => `${i + 1}. [${x.price} ${ctx.symbols.avocados}] \`${x.id}\` **${x.name}** (${x.desc})`), 5)
     return ctx.pgn.addPagination(user.discord_id, ctx.msg.channel.id, {
         pages, embed,
         buttons: ['back', 'forward'],
@@ -53,17 +53,17 @@ cmd(['store', 'info'], ['shop', 'info'], ['item', 'info'], withItem(async (ctx, 
 
 cmd(['store', 'buy'], ['shop', 'buy'], withItem(async (ctx, user, item, args) => {
     if(user.exp < item.price)
-        return ctx.reply(user, `you have to have at least \`${item.price}\` ${ctx.symbols.avoamusement} to buy this item`, 'red')
+        return ctx.reply(user, `you have to have at least \`${item.price}\` ${ctx.symbols.avocados} to buy this item`, 'red')
 
     return ctx.pgn.addConfirmation(user.discord_id, ctx.msg.channel.id, {
-        question: `Do you want to buy **${item.name} ${item.type}** for **${item.price}** ${ctx.symbols.avoamusement}?`,
+        question: `Do you want to buy **${item.name} ${item.type}** for **${item.price}** ${ctx.symbols.avocados}?`,
         force: ctx.globals.force,
         onConfirm: async (x) => {
             buyItem(ctx, user, item)
             user.exp -= item.price
             await user.save()
 
-            return ctx.reply(user, `you purchased **${item.name} ${item.type}** for **${item.price}** ${ctx.symbols.avoamusement}
+            return ctx.reply(user, `you purchased **${item.name} ${item.type}** for **${item.price}** ${ctx.symbols.avocados}
                 The item has been added to your inventory. See \`+inv info ${item.id}\` for details`, 'green')
         }
     })
